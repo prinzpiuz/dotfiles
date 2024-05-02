@@ -1,0 +1,120 @@
+[icons]
+icons = "awesome6"
+[icons.overrides]
+bat = [
+    "\uf244", #empty
+    "\uf243", #One quarter
+    "\uf242", #half full
+    "\uf241", #three quarter
+    "\uf240", #full
+]
+bat_charging = "\uf0e7"
+volume = "\uf028"
+microphone = "\uf130"
+headphones = "\uf293"
+thermometer = "\uf769"
+net_wired = "\uf6ff"
+net_wireless = "\uf1eb"
+
+[[block]]
+block = "apt"
+interval = 1800
+format = " \ue60b $count updates "
+format_singular = " \ue60b One update "
+critical_updates_regex = "(linux|linux-lts|linux-zen)"
+ 
+[[block]]
+block = "docker"
+interval = 2
+format = " $icon $running/$total "
+
+[[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:20) $play $next |}"
+player = "spotify"
+
+[[block]]
+block = "disk_space"
+info_type = "available"
+alert_unit = "GB"
+alert = 10.0
+warning = 15.0
+format = " $icon $available "
+format_alt = " $icon $available / $total "
+[[block.click]]
+button = "right"
+update = true
+
+[[block]]
+block = "memory"
+format = " $icon $mem_used_percents.eng(w:1) "
+format_alt = " $icon_swap $swap_free.eng(w:3,u:B,p:Mi)/$swap_total.eng(w:3,u:B,p:Mi)($swap_used_percents.eng(w:2)) "
+interval = 30
+warning_mem = 70
+critical_mem = 90
+
+[[block]]
+block = "cpu"
+interval = 1
+format = " $icon $barchart $utilization "
+format_alt = " $icon $frequency{ $boost|} "
+
+[[block]]
+block = "temperature"
+format = " $icon $max "
+format_alt = " $icon $min min, $max max, $average avg "
+interval = 10
+chip = "*-isa-*"
+
+[[block]]
+block = "bluetooth"
+mac = "E4:41:22:B5:CA:12"
+disconnected_format = " \uf294 "
+format = " $icon { $percentage|} "
+[block.battery_state]
+"0..20" = "critical"
+"21..70" = "warning"
+"71..100" = "good"
+
+[[block]]
+block = "sound"
+max_vol = 120
+format = " $output_name { $volume|} "
+[block.mappings]
+"alsa_output.pci-0000_00_1f.3.analog-stereo" = "🔊"
+"bluez_sink.E4_41_22_B5_CA_12.a2dp_sink" = "\uf025"
+"alsa_output.usb-USB_Microphone_Maono_Fairy_2020_11_21-00.analog-stereo" = "\uf3c9"
+
+[[block]]
+block = "sound"
+device_kind = "source"
+max_vol = 100
+
+[[block]]
+block = "net"
+device = "enp4s0"
+format = " $icon 🌍 $speed_down"
+inactive_format = " $icon \uf00d "
+
+[[block]]
+block = "net"
+device = "wlp0s20f3"
+inactive_format = " $icon \uf00d "
+
+[[block]]
+block = "time"
+interval = 60
+[block.format]
+full = " $icon $timestamp.datetime(f:'%a %Y-%m-%d %R') "
+short = " $icon $timestamp.datetime(f:%R) "
+
+[[block]]
+block = "uptime"
+interval = 3600 # update every hour
+
+[[block]]
+block = "battery"
+format = " $icon $percentage "
+empty_threshold = 20
+device = "DisplayDevice"
+driver = "upower"
