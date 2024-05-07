@@ -245,9 +245,8 @@ assign [class="Slack"] $ws4
 
 
 # Screenshots using maim
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date |sed 's/ //g').png"
-#bindsym $mod+Shift+p exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date |sed 's/ //g').png"
-bindsym $mod+Shift+p exec --no-startup-id maim --select "/home/$USER/Pictures/$(date |sed 's/ //g').png"
+bindsym $mod+Shift+p exec --no-startup-id maim --select "/tmp/ScreenShots/$(date "+%A_%T" | tr -s ':' '_').png"
+
 
 #to resize save dailogbox in firefox and other browsers
 for_window [title="Save As"] resize set 800 300 
