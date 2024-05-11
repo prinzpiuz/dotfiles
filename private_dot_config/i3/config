@@ -260,7 +260,7 @@ for_window [title="math_python"] floating enable
 for_window [title="math_python"] resize set 800 300
 for_window [title="math_python"] move scratchpad
 for_window [title="math_python"] border pixel 5
-exec --no-startup-id /home/prinzpiuz/.local/kitty.app/bin/kitty --title=math_python
+exec --no-startup-id /home/prinzpiuz/.local/kitty.app/bin/kitty --single-instance --title=math_python
 
 #to making android emulator floating
 for_window [title="^Android Emulator -"] floating enable

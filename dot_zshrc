@@ -281,3 +281,5 @@ function find_listening_ports() {
 export PATH="$HOME/bin:$PATH"
 
 export EDITOR="code --wait"
+
+export GLFW_IM_MODULE="ibus"

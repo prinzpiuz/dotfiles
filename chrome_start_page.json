@@ -1,0 +1,433 @@
+{
+  "version": 4,
+  "search": 1,
+  "ext": {
+    "id": "",
+    "version": "",
+    "reset": false,
+    "loaded": true,
+    "options": {
+      "hide_branding": true,
+      "hide_pages": true,
+      "hide_icons": true,
+      "hide_email": true,
+      "search_newtab": false,
+      "shortcuts_newtab": true,
+      "optout_tracking": false,
+      "blur_background": true,
+      "tint_background": false,
+      "allow_scroll": false,
+      "ext_openstart": true,
+      "ext_searchfocus": true,
+      "ext_focus": 1
+    }
+  },
+  "user": {
+    "id": 586752011245,
+    "source": "default",
+    "model": "default",
+    "layout": "DYNAMIC_07",
+    "variant": "default",
+    "device": {
+      "dark": true,
+      "screen_size": "1920x1080",
+      "window_size": "1920x993",
+      "os": "Linux",
+      "os_version": "x86_64",
+      "browser": "Chrome",
+      "browser_version": "124.0.0.0",
+      "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    },
+    "location": {
+      "country_code": "",
+      "country_name": "",
+      "region_name": "",
+      "region_code": "",
+      "city": "",
+      "postal_code": "",
+      "latitude": "",
+      "longitude": ""
+    }
+  },
+  "email": { "text": "Email", "provider": null, "custom": "" },
+  "pages": {
+    "default_page": 14485034967,
+    "list": [
+      {
+        "id": 14485034967,
+        "name": "ma",
+        "type": "dynamic",
+        "layout": "DYNAMIC_03",
+        "theme": {
+          "dark": true,
+          "image": "",
+          "color": "#000000",
+          "ani": "",
+          "custom": "",
+          "live": "",
+          "on": "onblack"
+        },
+        "widgets": [
+          {
+            "id": 944082063505,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 5,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 405274741762,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 6,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 167683002575,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 7,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 706376489413,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 4,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 53929306468,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 9,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 569774657432,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 8,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 859296966548,
+            "wid": "shortcut",
+            "r": 5,
+            "c": 4,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 172390926494,
+            "wid": "shortcut",
+            "r": 5,
+            "c": 5,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 106936264933,
+            "wid": "shortcut",
+            "r": 5,
+            "c": 6,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 997204983718,
+            "wid": "shortcut",
+            "r": 6,
+            "c": 4,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 434242109062,
+            "wid": "shortcut",
+            "r": 6,
+            "c": 5,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 121139196207,
+            "wid": "shortcut",
+            "r": 6,
+            "c": 6,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 854405150389,
+            "wid": "shortcut",
+            "r": 5,
+            "c": 9,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 912211191821,
+            "wid": "shortcut",
+            "r": 5,
+            "c": 8,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 862965868887,
+            "wid": "shortcut",
+            "r": 5,
+            "c": 7,
+            "x": 1,
+            "y": 1
+          }
+        ]
+      },
+      {
+        "id": 138247065233,
+        "name": "Home",
+        "type": "dynamic",
+        "layout": "DYNAMIC_07",
+        "theme": {
+          "dark": true,
+          "image": "",
+          "color": "#000000",
+          "ani": "",
+          "custom": "",
+          "live": "",
+          "on": "onblack"
+        },
+        "widgets": [
+          {
+            "id": 852786738704,
+            "wid": "search",
+            "r": 3,
+            "c": 5,
+            "x": 6,
+            "y": 1
+          },
+          {
+            "id": 586313090416,
+            "wid": "shortcut-weather",
+            "r": 4,
+            "c": 5,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 450493615019,
+            "wid": "shortcut-directions",
+            "r": 4,
+            "c": 6,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 129470204517,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 7,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 487413904865,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 8,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 547231769738,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 9,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 852152534759,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 10,
+            "x": 1,
+            "y": 1
+          }
+        ]
+      }
+    ]
+  },
+  "widgets": {
+    "852786738704": {
+      "id": 852786738704,
+      "wid": "search",
+      "options": { "provider": "bing", "selected": false, "hide_ani": false }
+    },
+    "586313090416": {
+      "id": 586313090416,
+      "wid": "shortcut-weather",
+      "options": { "name": "Weather", "url": null, "icon": "svg" }
+    },
+    "450493615019": {
+      "id": 450493615019,
+      "wid": "shortcut-directions",
+      "options": { "name": "Maps", "url": null, "icon": "svg" }
+    },
+    "129470204517": {
+      "id": 129470204517,
+      "wid": "shortcut",
+      "options": { "name": "Facebook", "url": "https://facebook.com" }
+    },
+    "487413904865": {
+      "id": 487413904865,
+      "wid": "shortcut",
+      "options": { "name": "Gmail", "url": "https://mail.google.com" }
+    },
+    "547231769738": {
+      "id": 547231769738,
+      "wid": "shortcut",
+      "options": { "name": "Youtube", "url": "https://youtube.com" }
+    },
+    "852152534759": {
+      "id": 852152534759,
+      "wid": "shortcut",
+      "options": { "name": "Instagram", "url": "https://instagram.com" }
+    },
+    "944082063505": {
+      "id": 944082063505,
+      "wid": "shortcut",
+      "options": {
+        "name": "Mail",
+        "url": "https://mail.google.com",
+        "icon": "mdi-email",
+        "color": "red darken-1"
+      }
+    },
+    "405274741762": {
+      "id": 405274741762,
+      "wid": "shortcut",
+      "options": { "name": "Github", "url": "https://github.com" }
+    },
+    "167683002575": {
+      "id": 167683002575,
+      "wid": "shortcut",
+      "options": { "name": "Linkedin", "url": "https://www.linkedin.com" }
+    },
+    "706376489413": {
+      "id": 706376489413,
+      "wid": "shortcut",
+      "options": { "name": "Twitter", "url": "https://twitter.com" }
+    },
+    "53929306468": {
+      "id": 53929306468,
+      "wid": "shortcut",
+      "options": { "name": "Reddit", "url": "https://www.reddit.com" }
+    },
+    "569774657432": {
+      "id": 569774657432,
+      "wid": "shortcut",
+      "options": { "name": "Twitch", "url": "https://www.twitch.tv" }
+    },
+    "859296966548": {
+      "id": 859296966548,
+      "wid": "shortcut",
+      "options": {
+        "name": "hoppscotch",
+        "url": "https://hoppscotch.io/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "172390926494": {
+      "id": 172390926494,
+      "wid": "shortcut",
+      "options": {
+        "name": "udemy",
+        "url": "https://www.udemy.com/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "106936264933": {
+      "id": 106936264933,
+      "wid": "shortcut",
+      "options": {
+        "name": "pulse",
+        "url": "https://pulse.zerodha.com/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "997204983718": {
+      "id": 997204983718,
+      "wid": "shortcut",
+      "options": {
+        "name": "tijori",
+        "url": "https://www.tijorifinance.com/in/timeline/all",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "434242109062": {
+      "id": 434242109062,
+      "wid": "shortcut",
+      "options": {
+        "name": "varsity-zerodha",
+        "url": "https://zerodha.com/varsity/module/personalfinance/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "121139196207": {
+      "id": 121139196207,
+      "wid": "shortcut",
+      "options": {
+        "name": "Tasks",
+        "url": "https://www.notion.so/prinzpiuz/6a125a9b27af477587bab51277ffe299?v=7b0c40c335a64214a1c7fe62998d68bc&p=501b111133f14c5a8701139bb2a09245&pm=s",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "854405150389": {
+      "id": 854405150389,
+      "wid": "shortcut",
+      "options": {
+        "name": "Projecct Euler",
+        "url": "https://projecteuler.net/sign_in",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "912211191821": {
+      "id": 912211191821,
+      "wid": "shortcut",
+      "options": {
+        "name": "Hacker Rank",
+        "url": "https://www.hackerrank.com/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "862965868887": {
+      "id": 862965868887,
+      "wid": "shortcut",
+      "options": {
+        "name": "Mastodon",
+        "url": "https://elk.zone/home",
+        "icon": "default",
+        "color": "default"
+      }
+    }
+  },
+  "query": null,
+  "tmp": { "active_page": 14485034967 },
+  "tour": { "shortcut": null }
+}
