@@ -18,6 +18,7 @@ set $other "alsa_output.usb-USB_Microphone_Maono_Fairy_2020_11_21-00.analog-ster
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Monaco 8
+for_window [class=".*"] title_window_icon on
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -106,11 +107,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "VScode"
-set $ws2 "Kitty"
-set $ws3 "Personal"
+set $ws1 "VScode"
+set $ws2 "Kitty"
+set $ws3 "Chrome"
 set $ws4 "Netprotect"
-set $ws5 "Spotify"
+set $ws5 "Spotify"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -293,3 +294,17 @@ exec --no-startup-id copyq
 bindsym $super+1 exec --no-startup-id pactl set-default-sink $primary_sink && pactl set-sink-volume $primary_sink 75% && i3-msg restart && dunstify "Switched To Speakers"
 bindsym $super+2 exec --no-startup-id pactl set-default-sink $bluetooth_sink && pactl set-sink-volume $bluetooth_sink 100% && i3-msg restart && dunstify "Switched To Bluetooth"
 bindsym $super+3 exec --no-startup-id pactl set-default-sink $other && pactl set-sink-volume $other 40% && i3-msg restart && dunstify "Switched To Other"
+
+
+# Color shemes for windows 
+set $bgcolor    #000000
+set $in-bgcolor #363636
+set $text       #ffffff
+set $u-bgcolor  #ff0000
+set $indicator  #a8a3c1
+set $in-text    #969696
+#                       border          background      text            indicator (a line which shows where the next window will be placed)     
+client.focused          $bgcolor        $bgcolor        $text           $indicator
+client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor 
