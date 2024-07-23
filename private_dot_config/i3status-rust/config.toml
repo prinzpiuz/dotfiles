@@ -22,7 +22,7 @@ interval = 1800
 format = " \ue60b $count updates "
 format_singular = " \ue60b One update "
 critical_updates_regex = "(linux|linux-lts|linux-zen)"
- 
+
 [[block]]
 block = "docker"
 interval = 2
@@ -68,13 +68,18 @@ chip = "*-isa-*"
 
 [[block]]
 block = "bluetooth"
-mac = "E4:41:22:B5:CA:12"
+mac = "80:C3:BA:4F:A9:94"
 disconnected_format = " \uf294 "
-format = " $icon { $percentage|} "
+format = " $icon "
 [block.battery_state]
 "0..20" = "critical"
 "21..70" = "warning"
 "71..100" = "good"
+
+[[block]]
+block = "custom"
+command = ''' /home/prinzpiuz/.local/bin/bluetooth_battery 80:C3:BA:4F:A9:94 | awk '{ print $6 }' '''
+format = " \uf5df $text.pango-str() "
 
 [[block]]
 block = "sound"
@@ -82,7 +87,7 @@ max_vol = 120
 format = " $output_name { $volume|} "
 [block.mappings]
 "alsa_output.pci-0000_00_1f.3.analog-stereo" = "🔊"
-"bluez_sink.E4_41_22_B5_CA_12.a2dp_sink" = "\uf025"
+"bluez_sink.80_C3_BA_4F_A9_94.a2dp_sink" = "\uf025"
 "alsa_output.usb-USB_Microphone_Maono_Fairy_2020_11_21-00.analog-stereo" = "\uf3c9"
 
 [[block]]
@@ -110,7 +115,7 @@ short = " $icon $timestamp.datetime(f:%R) "
 
 [[block]]
 block = "uptime"
-interval = 3600 # update every hour
+interval = 3600  # update every hour
 
 [[block]]
 block = "battery"
