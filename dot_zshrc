@@ -9,7 +9,7 @@ COMPLETION_WAITING_DOTS="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git git-commit sudo zsh-autosuggestions themes command-not-found adb aliases debian)
+plugins=(git git-commit sudo zsh-autosuggestions themes command-not-found aliases debian)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,underline"
 
@@ -182,13 +182,19 @@ function find_listening_ports() {
     fi
 }
 
+function edit_and_apply() {
+    if [ -z "$1" ]; then echo "Usage: Need File Name"
+    else chezmoi edit "$1" && chezmoi apply "$1"
+    fi
+}
+
 export PATH="$HOME/bin:$PATH"
 
 export EDITOR="code --wait"
 
 export GLFW_IM_MODULE="ibus"
 
-
+alias vpn_session="openvpn3 sessions-list | grep Path | awk '{ print \$2 }'"
 alias vpn_disconnect="openvpn3 session-manage --disconnect --session-path"
 
 alias update_kitty="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
@@ -201,6 +207,10 @@ alias reload="source ~/.zshrc"
 alias gca="git commit --amend -m"
 
 # ledger commands
-LEDGER="/home/prinzpiuz/prinzpiuz-notes/prinzpiuz-notes/Notes/Finance\ Management/transactions.ledger"
+PAISA_CONFIG="/home/prinzpiuz/prinzpiuz-notes/prinzpiuz-notes/Notes/Finance/paisa/paisa.yaml"
+LEDGER="/home/prinzpiuz/prinzpiuz-notes/prinzpiuz-notes/Notes/Finance/paisa/main.ledger"
 alias balance="ledger -f $LEDGER balance"
-alias ledger_summary="ledger print -f $LEDGER --raw | hledger -f- is -MAS -2"
+alias ledger_summary="paisa serve --config $PAISA_CONFIG"
+
+export XDG_RUNTIME_DIR="/run/user/$UID"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"

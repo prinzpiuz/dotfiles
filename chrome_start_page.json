@@ -71,23 +71,23 @@
           {
             "id": 944082063505,
             "wid": "shortcut",
-            "r": 4,
-            "c": 5,
+            "r": 2,
+            "c": 7,
             "x": 1,
             "y": 1
           },
           {
             "id": 405274741762,
             "wid": "shortcut",
-            "r": 4,
-            "c": 6,
+            "r": 7,
+            "c": 5,
             "x": 1,
             "y": 1
           },
           {
             "id": 167683002575,
             "wid": "shortcut",
-            "r": 4,
+            "r": 7,
             "c": 7,
             "x": 1,
             "y": 1
@@ -95,13 +95,21 @@
           {
             "id": 706376489413,
             "wid": "shortcut",
-            "r": 4,
-            "c": 4,
+            "r": 7,
+            "c": 6,
             "x": 1,
             "y": 1
           },
           {
             "id": 53929306468,
+            "wid": "shortcut",
+            "r": 2,
+            "c": 3,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 859296966548,
             "wid": "shortcut",
             "r": 4,
             "c": 9,
@@ -109,26 +117,10 @@
             "y": 1
           },
           {
-            "id": 569774657432,
-            "wid": "shortcut",
-            "r": 4,
-            "c": 8,
-            "x": 1,
-            "y": 1
-          },
-          {
-            "id": 859296966548,
-            "wid": "shortcut",
-            "r": 5,
-            "c": 4,
-            "x": 1,
-            "y": 1
-          },
-          {
             "id": 172390926494,
             "wid": "shortcut",
-            "r": 5,
-            "c": 5,
+            "r": 7,
+            "c": 11,
             "x": 1,
             "y": 1
           },
@@ -136,7 +128,7 @@
             "id": 106936264933,
             "wid": "shortcut",
             "r": 5,
-            "c": 6,
+            "c": 1,
             "x": 1,
             "y": 1
           },
@@ -144,22 +136,22 @@
             "id": 997204983718,
             "wid": "shortcut",
             "r": 6,
-            "c": 4,
+            "c": 2,
             "x": 1,
             "y": 1
           },
           {
             "id": 434242109062,
             "wid": "shortcut",
-            "r": 6,
-            "c": 5,
+            "r": 7,
+            "c": 1,
             "x": 1,
             "y": 1
           },
           {
             "id": 121139196207,
             "wid": "shortcut",
-            "r": 6,
+            "r": 2,
             "c": 6,
             "x": 1,
             "y": 1
@@ -167,24 +159,88 @@
           {
             "id": 854405150389,
             "wid": "shortcut",
-            "r": 5,
-            "c": 9,
+            "r": 7,
+            "c": 10,
             "x": 1,
             "y": 1
           },
           {
             "id": 912211191821,
             "wid": "shortcut",
-            "r": 5,
-            "c": 8,
+            "r": 7,
+            "c": 9,
             "x": 1,
             "y": 1
           },
           {
             "id": 862965868887,
             "wid": "shortcut",
+            "r": 2,
+            "c": 13,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 293159948939,
+            "wid": "shortcut",
+            "r": 2,
+            "c": 4,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 648410245910,
+            "wid": "shortcut",
             "r": 5,
-            "c": 7,
+            "c": 2,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 941570993134,
+            "wid": "shortcut",
+            "r": 6,
+            "c": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 644389195054,
+            "wid": "shortcut",
+            "r": 2,
+            "c": 1,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 784771299461,
+            "wid": "shortcut",
+            "r": 2,
+            "c": 2,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 139306149059,
+            "wid": "shortcut",
+            "r": 3,
+            "c": 13,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 546449825019,
+            "wid": "shortcut",
+            "r": 2,
+            "c": 14,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 546048243234,
+            "wid": "shortcut",
+            "r": 7,
+            "c": 13,
             "x": 1,
             "y": 1
           }
@@ -331,11 +387,6 @@
       "wid": "shortcut",
       "options": { "name": "Reddit", "url": "https://www.reddit.com" }
     },
-    "569774657432": {
-      "id": 569774657432,
-      "wid": "shortcut",
-      "options": { "name": "Twitch", "url": "https://www.twitch.tv" }
-    },
     "859296966548": {
       "id": 859296966548,
       "wid": "shortcut",
@@ -424,6 +475,86 @@
         "url": "https://elk.zone/home",
         "icon": "default",
         "color": "default"
+      }
+    },
+    "293159948939": {
+      "id": 293159948939,
+      "wid": "shortcut",
+      "options": {
+        "name": "Lobster",
+        "url": "https://lobste.rs/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "648410245910": {
+      "id": 648410245910,
+      "wid": "shortcut",
+      "options": {
+        "name": "smallcase",
+        "url": "https://smallcase.zerodha.com/dashboard",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "941570993134": {
+      "id": 941570993134,
+      "wid": "shortcut",
+      "options": {
+        "name": "kite",
+        "url": "https://kite.zerodha.com/dashboard",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "644389195054": {
+      "id": 644389195054,
+      "wid": "shortcut",
+      "options": {
+        "name": "BookMarks",
+        "url": "https://app.raindrop.io/my/-1",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "784771299461": {
+      "id": 784771299461,
+      "wid": "shortcut",
+      "options": {
+        "name": "RSS",
+        "url": "https://feedly.com/i/my",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "139306149059": {
+      "id": 139306149059,
+      "wid": "shortcut",
+      "options": {
+        "name": "[Matrix]",
+        "url": "https://app.element.io/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "546449825019": {
+      "id": 546449825019,
+      "wid": "shortcut",
+      "options": {
+        "name": "pixelfed",
+        "url": "https://pixelfed.social/i/web",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "546048243234": {
+      "id": 546048243234,
+      "wid": "shortcut",
+      "options": {
+        "name": "Druv v3.0",
+        "url": "http://192.168.2.154:3000/",
+        "icon": "mdi-desktop-classic",
+        "color": "blue"
       }
     }
   },
