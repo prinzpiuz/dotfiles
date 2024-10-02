@@ -72,7 +72,7 @@
             "id": 944082063505,
             "wid": "shortcut",
             "r": 2,
-            "c": 7,
+            "c": 8,
             "x": 1,
             "y": 1
           },
@@ -152,7 +152,7 @@
             "id": 121139196207,
             "wid": "shortcut",
             "r": 2,
-            "c": 6,
+            "c": 9,
             "x": 1,
             "y": 1
           },
@@ -240,6 +240,30 @@
             "id": 546048243234,
             "wid": "shortcut",
             "r": 7,
+            "c": 13,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 629027917432,
+            "wid": "shortcut",
+            "r": 7,
+            "c": 14,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 995113578710,
+            "wid": "shortcut",
+            "r": 2,
+            "c": 5,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 424146664314,
+            "wid": "shortcut",
+            "r": 6,
             "c": 13,
             "x": 1,
             "y": 1
@@ -552,9 +576,39 @@
       "wid": "shortcut",
       "options": {
         "name": "Druv v3.0",
-        "url": "http://192.168.2.154:3000/",
+        "url": "http://192.168.29.242:3000/",
         "icon": "mdi-desktop-classic",
         "color": "blue"
+      }
+    },
+    "629027917432": {
+      "id": 629027917432,
+      "wid": "shortcut",
+      "options": {
+        "name": "Emby",
+        "url": "http://app.emby.media/#!/home",
+        "icon": "mdi-camera",
+        "color": "blue"
+      }
+    },
+    "995113578710": {
+      "id": 995113578710,
+      "wid": "shortcut",
+      "options": {
+        "name": "Lemmy",
+        "url": "https://lemmy.world/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "424146664314": {
+      "id": 424146664314,
+      "wid": "shortcut",
+      "options": {
+        "name": "TailScale",
+        "url": "https://login.tailscale.com/admin/machines",
+        "icon": "mdi-desktop-classic",
+        "color": "green"
       }
     }
   },
