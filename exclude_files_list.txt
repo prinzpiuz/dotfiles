@@ -1,0 +1,15 @@
+/boot
+/dev
+/tmp
+/sys
+/proc
+/backup
+/mnt/
+/run/
+/media/*
+/lost+found
+/etc/fstab
+/etc/mtab
+/etc/mdadm.conf
+/etc/sysconfig/network*
+home/prinzpiuz/.android/*
