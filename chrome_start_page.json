@@ -112,7 +112,7 @@
             "id": 859296966548,
             "wid": "shortcut",
             "r": 4,
-            "c": 9,
+            "c": 11,
             "x": 1,
             "y": 1
           },
@@ -265,6 +265,22 @@
             "wid": "shortcut",
             "r": 6,
             "c": 13,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 530596062242,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 6,
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": 856118343531,
+            "wid": "shortcut",
+            "r": 4,
+            "c": 7,
             "x": 1,
             "y": 1
           }
@@ -609,6 +625,26 @@
         "url": "https://login.tailscale.com/admin/machines",
         "icon": "mdi-desktop-classic",
         "color": "green"
+      }
+    },
+    "530596062242": {
+      "id": 530596062242,
+      "wid": "shortcut",
+      "options": {
+        "name": "prinzpiuz.in",
+        "url": "https://prinzpiuz.in/",
+        "icon": "default",
+        "color": "default"
+      }
+    },
+    "856118343531": {
+      "id": 856118343531,
+      "wid": "shortcut",
+      "options": {
+        "name": "goat counter",
+        "url": "https://prinzpiuz.goatcounter.com/",
+        "icon": "mdi-database",
+        "color": "blue"
       }
     }
   },
