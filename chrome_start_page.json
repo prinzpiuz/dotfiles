@@ -283,6 +283,14 @@
             "c": 7,
             "x": 1,
             "y": 1
+          },
+          {
+            "id": 486806819044,
+            "wid": "shortcut",
+            "r": 3,
+            "c": 14,
+            "x": 1,
+            "y": 1
           }
         ]
       },
@@ -645,6 +653,16 @@
         "url": "https://prinzpiuz.goatcounter.com/",
         "icon": "mdi-database",
         "color": "blue"
+      }
+    },
+    "486806819044": {
+      "id": 486806819044,
+      "wid": "shortcut",
+      "options": {
+        "name": "Telegram",
+        "url": "https://web.telegram.org/a/",
+        "icon": "default",
+        "color": "default"
       }
     }
   },
