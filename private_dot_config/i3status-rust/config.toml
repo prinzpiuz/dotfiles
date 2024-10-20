@@ -83,8 +83,10 @@ format = " \uf5df $text.pango-str() "
 
 [[block]]
 block = "sound"
+driver = "auto"
 max_vol = 120
 format = " $output_name { $volume|} "
+headphones_indicator = true
 [block.mappings]
 "alsa_output.pci-0000_00_1f.3.analog-stereo" = "🔊"
 "bluez_sink.80_C3_BA_4F_A9_94.a2dp_sink" = "\uf025"
@@ -103,7 +105,7 @@ inactive_format = " $icon \uf00d "
 
 [[block]]
 block = "net"
-device = "wlp0s20f3"
+device = "wlp5s0"
 inactive_format = " $icon \uf00d "
 
 [[block]]
