@@ -223,7 +223,7 @@ alias md="mullvad disconnect"
 
 # restic
 RESTIC_BASE_COMMAND="restic --verbose --repo sftp:prinzpiuz@192.168.29.196:/media/prinzpiuz/backups/Workstation --password-file ~/.config/resticprofile/password.txt"
-alias unlock_repo="$BASE_COMMAND unlock"
+alias restic_repo_unlock="$BASE_COMMAND unlock"
 alias restic_repo_ls="$BASE_COMMAND snapshots"
 alias restic_list="$BASE_COMMAND list"
 alias restic_stats="$BASE_COMMAND stats"
