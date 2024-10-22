@@ -222,8 +222,16 @@ alias mc="mullvad connect"
 alias md="mullvad disconnect"
 
 # restic
-BASE_COMMAND="restic --verbose --repo sftp:prinzpiuz@192.168.29.196:/media/prinzpiuz/backups/Workstation --password-file ~/.config/resticprofile/password.txt"
+RESTIC_BASE_COMMAND="restic --verbose --repo sftp:prinzpiuz@192.168.29.196:/media/prinzpiuz/backups/Workstation --password-file ~/.config/resticprofile/password.txt"
 alias unlock_repo="$BASE_COMMAND unlock"
 alias restic_repo_ls="$BASE_COMMAND snapshots"
 alias restic_list="$BASE_COMMAND list"
 alias restic_stats="$BASE_COMMAND stats"
+
+# resticprofile
+RESTICPROFILE_BASE_COMMAND="sudo rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/* && sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
+alias rp_dry_run="$RESTICPROFILE_BASE_COMMAND backup --dry-run"
+alias rp_run="$RESTICPROFILE_BASE_COMMAND backup"
+alias rp_schedule="$RESTICPROFILE_BASE_COMMAND schedule"
+alias rp_remove_schedule="$RESTICPROFILE_BASE_COMMAND unschedule"
+alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
