@@ -220,3 +220,10 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 alias ms="mullvad status"
 alias mc="mullvad connect"
 alias md="mullvad disconnect"
+
+# restic
+BASE_COMMAND="restic --verbose --repo sftp:prinzpiuz@192.168.29.196:/media/prinzpiuz/backups/Workstation --password-file ~/.config/resticprofile/password.txt"
+alias unlock_repo="$BASE_COMMAND unlock"
+alias restic_repo_ls="$BASE_COMMAND snapshots"
+alias restic_list="$BASE_COMMAND list"
+alias restic_stats="$BASE_COMMAND stats"
