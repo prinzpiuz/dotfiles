@@ -1,0 +1,24 @@
+/boot
+/dev/*
+/tmp/*
+/sys/*
+/proc/*
+/backup
+/mnt/*
+/run/*
+/media/*
+/lost+found/*
+/etc/fstab
+/etc/mtab
+/etc/mdadm.conf
+/etc/sysconfig/network*
+/var/log/*
+/var/cache
+/var/lib/docker
+/var/lib/mysql
+/var/cache/apt/*
+.cache
+/home/prinzpiuz/.config/resticprofile/log/*
+/etc/mdadm.conf
+/home/prinzpiuz/.config/google-chrome
+/home/prinzpiuz/VirtualBox VMs

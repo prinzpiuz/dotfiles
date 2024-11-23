@@ -18,6 +18,8 @@ source $ZSH/oh-my-zsh.sh
 #to source work related aliases and commands, which will not staged in git
 source /home/prinzpiuz/.extraZshRc
 
+export PATH="$PATH:/home/prinzpiuz/.local/bin"
+
 #android home
 export ANDROID_HOME=/usr/lib/Android
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -80,9 +82,6 @@ alias rrestart="systemctl restart redis-server"
 
 #debian repository update and system applications upgrade
 alias update="sudo apt update && sudo apt upgrade -y"
-
-#this is for balena-cli for raspberry pi
-export PATH="$PATH:/home/prinzpiuz/balena-cli"
 
 #to launch flutter emulator
 alias android="flutter emulator --launch pixel"
@@ -220,3 +219,20 @@ alias md="mullvad disconnect"
 alias run="python manage.py runserver || flutter run"
 alias Ipython3="python3 -m IPython"
 export PATH="$PATH:~/.local/bin"
+
+
+# restic
+RESTIC_BASE_COMMAND="restic --verbose --repo /media/prinzpiuz/backups/Personal --password-file ~/.config/resticprofile/password.txt"
+alias restic_repo_unlock="$RESTIC_BASE_COMMAND unlock"
+alias restic_repo_ls="$RESTIC_BASE_COMMAND snapshots"
+alias restic_list="$RESTIC_BASE_COMMAND list"
+alias restic_stats="$RESTIC_BASE_COMMAND stats"
+
+# resticprofile
+DELETE_UNWANTED_FILES="sudo rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
+RESTICPROFILE_BASE_COMMAND="sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
+alias rp_dry_run="$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup --dry-run"
+alias rp_run="$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup"
+alias rp_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND schedule"
+alias rp_remove_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND unschedule"
+alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
