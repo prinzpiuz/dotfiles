@@ -236,3 +236,6 @@ alias rp_run="$DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND backup"
 alias rp_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND schedule"
 alias rp_remove_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND unschedule"
 alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
+
+# xautolock toggle
+alias xt="xautolock -toggle"
