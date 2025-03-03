@@ -89,7 +89,7 @@ format = " $output_name { $volume|} "
 "alsa_output.pci-0000_00_1f.3.analog-stereo" = "🔊"
 "bluez_sink.80_C3_BA_4F_A9_94.a2dp_sink" = "\uf025"
 "alsa_output.usb-USB_Microphone_Maono_Fairy_2020_11_21-00.analog-stereo" = "\uf3c9"
-"alsa_output.usb-Sennheiser_Sennheiser_PC_8.2_USB_A002900213403981-00.analog-stereo" = "\uf025"
+# "alsa_output.usb-Sennheiser_Sennheiser_PC_8.2_USB_A002900213403981-00.analog-stereo" = "\uf025"
 
 
 [[block]]
