@@ -31,7 +31,7 @@ format = " $icon $running/$total "
 
 [[block]]
 block = "music"
-format = " $spotify {$combo.str(max_w:20) $play $next |}"
+format = " \uf1bc {$combo.str(max_w:20) $play $next |}"
 player = "spotify"
 
 [[block]]
