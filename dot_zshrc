@@ -31,7 +31,7 @@ export ANDROID_SDK_ROOT=/usr/lib/Android
 export PATH=$ANDROID_SDK_ROOT:$PATH
 
 #flutter
-export FLUTTER_HOME=/usr/lib/flutter
+export FLUTTER_HOME=/usr/local/bin/flutter
 export PATH=$FLUTTER_HOME/bin:$PATH
 
 export CHROME_EXECUTABLE=/usr/bin/firefox
