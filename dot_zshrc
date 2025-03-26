@@ -218,7 +218,7 @@ export PATH="$PATH:~/.local/bin"
 
 
 # restic
-RESTIC_BASE_COMMAND="restic --verbose --repo /media/prinzpiuz/backups1/Personal --password-file ~/.config/resticprofile/password.txt"
+RESTIC_BASE_COMMAND="restic --verbose --repo /media/prinzpiuz/backups/Personal --password-file ~/.config/resticprofile/password.txt"
 alias restic_repo_unlock="$RESTIC_BASE_COMMAND unlock"
 alias restic_repo_ls="$RESTIC_BASE_COMMAND snapshots"
 alias restic_list="$RESTIC_BASE_COMMAND list"
