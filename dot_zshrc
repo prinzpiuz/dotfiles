@@ -29,6 +29,7 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 #android sdk root
 export ANDROID_SDK_ROOT=/usr/lib/Android
 export PATH=$ANDROID_SDK_ROOT:$PATH
+alias sdkmanager="/usr/lib/Android/cmdline-tools/latest/bin/sdkmanager"
 
 #flutter
 export FLUTTER_HOME=/usr/local/bin/flutter
