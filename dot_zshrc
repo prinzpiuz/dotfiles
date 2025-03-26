@@ -100,11 +100,6 @@ export XMODIFIERS=@im=ibus
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-#librespeed cli https://github.com/librespeed/speedtest-cli
-#connecting to banglore server
-#installed in /usr/local/bin
-alias speed="~/bin/librespeed-cli-linux-amd64 --server 4 --bytes"
-
 #linux homebrew installation
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/prinzpiuz/.zprofile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
