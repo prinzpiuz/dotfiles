@@ -233,7 +233,9 @@ alias rp_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFIL
 alias rp_remove_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND unschedule"
 alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
 
-
 #uv
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
+#pre-commit
+alias pcr="pre-commit run --all-files"
