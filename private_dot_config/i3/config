@@ -202,7 +202,7 @@ default_floating_border pixel 0
 
 #to lock screen
 bindsym $mod+9 exec /home/prinzpiuz/bin/start-Xscreensaver.sh
-exec xautolock -detectsleep -time 5 -locker "i3lock -i debian_logo4k.png"
+exec xautolock -detectsleep -time 30 -locker "i3lock -i debian_logo4k.png"
 
 #auto start application
 exec --no-startup-id tlp
