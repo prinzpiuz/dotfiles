@@ -236,7 +236,7 @@ bindsym $mod+Tab workspace back_and_forth
 #to assign some applications to specific workspace
 #to get the class of the applications use "xprop | grep WM_CLASS | awk '{ print $4 }'" then click on the specific window
 for_window [class="Spotify"] move container to workspace $ws5
-assign [class="Firefox-esr"] $ws3
+assign [class="firefox"] $ws3
 assign [class="Google-chrome"] $ws3
 assign [class="Gnome-terminal"] $ws2
 assign [class="Code"] $ws1
