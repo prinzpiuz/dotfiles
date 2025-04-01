@@ -57,7 +57,7 @@ function activate_venv
   end
   set venv_name $argv[1]
   if test -d ~/venvs/$venv_name
-    source ~/venvs/$venv_name/bin/activate
+    source ~/venvs/$venv_name/bin/activate.fish
     set -l old_venv $VIRTUAL_ENV
     set -gx VIRTUAL_ENV $venv_name
     if test -n $old_venv -a $old_venv != $VIRTUAL_ENV
@@ -72,6 +72,6 @@ end
 
 function auto_alias_virtual_envs
     for venv in (ls ~/venvs)
-    alias "$venv""env" "source ~/venvs/$venv/bin/activate ; set -l old_venv \$VIRTUAL_ENV ; set -gx VIRTUAL_ENV $venv ; if test -n \$old_venv ; and test \$old_venv != \$VIRTUAL_ENV ; echo \"Deactivated virtualenv '\$old_venv'.\" ; end ; echo \"Activated virtualenv '$venv'.\""
+    alias "$venv""env" "source ~/venvs/$venv/bin/activate.fish ; set -l old_venv \$VIRTUAL_ENV ; set -gx VIRTUAL_ENV $venv ; if test -n \$old_venv ; and test \$old_venv != \$VIRTUAL_ENV ; echo \"Deactivated virtualenv '\$old_venv'.\" ; end ; echo \"Activated virtualenv '$venv'.\""
     end
 end
