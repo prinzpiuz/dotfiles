@@ -73,7 +73,7 @@ set RESTIC_BASE_COMMAND "restic --verbose --repo /media/prinzpiuz/backups/Person
 set DELETE_UNWANTED_FILES sudo "rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
 set RESTICPROFILE_BASE_COMMAND "sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
 abbr restic_repo_unlock '$RESTIC_BASE_COMMAND unlock'
-alias restic_repo_ls '$RESTIC_BASE_COMMAND snapshots'
+alias restic_repo_ls="$RESTIC_BASE_COMMAND snapshots"
 abbr restic_list '$RESTIC_BASE_COMMAND list'
 abbr restic_stats '$RESTIC_BASE_COMMAND stats'
 abbr rp_dry_run '$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup --dry-run'
