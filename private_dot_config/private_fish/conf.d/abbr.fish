@@ -72,12 +72,12 @@ abbr Ipython3 'python3 -m IPython'
 set RESTIC_BASE_COMMAND "restic --verbose --repo /media/prinzpiuz/backups/Personal --password-file ~/.config/resticprofile/password.txt"
 set DELETE_UNWANTED_FILES sudo "rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
 set RESTICPROFILE_BASE_COMMAND "sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
-abbr restic_repo_unlock '$RESTIC_BASE_COMMAND unlock'
+alias restic_repo_unlock="$RESTIC_BASE_COMMAND unlock"
 alias restic_repo_ls="$RESTIC_BASE_COMMAND snapshots"
-abbr restic_list '$RESTIC_BASE_COMMAND list'
-abbr restic_stats '$RESTIC_BASE_COMMAND stats'
-abbr rp_dry_run '$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup --dry-run'
-abbr rp_run '$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup'
-abbr rp_schedule 'restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND schedule'
-abbr rp_remove_schedule 'restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND unschedule'
-abbr rp_schedule_status '$RESTICPROFILE_BASE_COMMAND status'
+alias restic_list="$RESTIC_BASE_COMMAND list"
+alias restic_stats="$RESTIC_BASE_COMMAND stats"
+alias rp_dry_run="$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup --dry-run"
+alias rp_run="$DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND backup"
+alias rp_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND schedule"
+alias rp_remove_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND unschedule"
+alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
