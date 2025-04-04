@@ -45,7 +45,3 @@ set --universal --export DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bu
 set --universal --export PAISA_CONFIG "/home/prinzpiuz/Notes/Notes/Finance/paisa/paisa.yaml"
 set --universal --export LEDGER "/home/prinzpiuz/Notes/Notes/Finance/paisa/main.ledger"
 
-#restic
-set --universal --export RESTIC_BASE_COMMAND "restic --verbose --repo /media/prinzpiuz/backups/Personal --password-file ~/.config/resticprofile/password.txt"
-set --universal --export DELETE_UNWANTED_FILES sudo "rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
-set --universal --export RESTICPROFILE_BASE_COMMAND "sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
