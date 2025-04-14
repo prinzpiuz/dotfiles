@@ -19,6 +19,7 @@ fish_add_path $JAVA_HOME
 set -x -U GOPATH $HOME/go
 set -x GOROOT  /usr/local/go
 set -x PATH $PATH $GOROOT/bin
+fish_add_path $GOPATH/bin
 
 #ibus
 set --universal --export GTK_IM_MODULE ibus
