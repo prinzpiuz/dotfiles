@@ -10,15 +10,15 @@ set --universal --export CHROME_EXECUTABLE /usr/bin/firefox
 set --universal --export GRADLE_HOME /opt/gradle/gradle-7.5.1
 set --universal --export JAVA_HOME (dirname (dirname (readlink -f (which java))))    
 fish_add_path $ANDROID_HOME/platform-tools
-fish_add_path  $ANDROID_SDK_ROOT
+fish_add_path $ANDROID_SDK_ROOT
 fish_add_path $FLUTTER_HOME/bin
 fish_add_path $GRADLE_HOME/bin
 fish_add_path $JAVA_HOME
 
 #go
-fish_add_path $HOME/go
-fish_add_path $GOROOT/bin
-fish_add_path /usr/local/go/bin
+set -x -U GOPATH $HOME/go
+set -x GOROOT  /usr/local/go
+set -x PATH $PATH $GOROOT/bin
 
 #ibus
 set --universal --export GTK_IM_MODULE ibus
@@ -44,4 +44,3 @@ set --universal --export DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bu
 #ledger
 set --universal --export PAISA_CONFIG "/home/prinzpiuz/Notes/Notes/Finance/paisa/paisa.yaml"
 set --universal --export LEDGER "/home/prinzpiuz/Notes/Notes/Finance/paisa/main.ledger"
-
