@@ -228,10 +228,10 @@ alias restic_stats="$RESTIC_BASE_COMMAND stats"
 # resticprofile
 DELETE_UNWANTED_FILES="sudo rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
 RESTICPROFILE_BASE_COMMAND="sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
-alias rp_dry_run="$DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND backup --dry-run"
-alias rp_run="$DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND backup"
-alias rp_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND schedule"
-alias rp_remove_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES && $RESTICPROFILE_BASE_COMMAND unschedule"
+alias rp_dry_run="$RESTICPROFILE_BASE_COMMAND backup --dry-run"
+alias rp_run="$RESTICPROFILE_BASE_COMMAND backup"
+alias rp_schedule="restic_repo_unlock && $RESTICPROFILE_BASE_COMMAND schedule"
+alias rp_remove_schedule="restic_repo_unlock && $RESTICPROFILE_BASE_COMMAND unschedule"
 alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
 
 # xautolock toggle
