@@ -35,7 +35,7 @@ abbr search 'apt search'
 abbr p 'ping -i 1 -c 5 -w 30 -q 8.8.8.8'
 abbr nd 'sudo chattr +i'
 abbr un 'sudo chattr -i'
-abbr ll 'eza --long --all  --header --git --icons --color=always --group-directories-first'
+# abbr ll 'eza --long --all  --header --git --icons --color=always --group-directories-first'
 abbr list_with_size 'eza --long --all  --header --git --icons --total-size --color=always --group-directories-first'
 
 #kitty
