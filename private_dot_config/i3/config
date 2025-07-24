@@ -295,9 +295,9 @@ exec --no-startup-id /usr/bin/copyq
 exec --no-startup-id xscreensaver & 
 
 #switch to different sound outputs
-bindsym $super+1 exec --no-startup-id pactl set-default-sink $primary_sink && pactl set-sink-volume $primary_sink 75% && i3-msg restart && dunstify "Switched To Speakers"
-bindsym $super+2 exec --no-startup-id pactl set-default-sink $bluetooth_sink && pactl set-sink-volume $bluetooth_sink 100% && i3-msg restart && dunstify "Switched To Bluetooth"
-bindsym $super+3 exec --no-startup-id pactl set-default-sink $other && pactl set-sink-volume $other 40% && i3-msg restart && dunstify "Switched To Other"
+# bindsym $super+1 exec --no-startup-id pactl set-default-sink $primary_sink && pactl set-sink-volume $primary_sink 75% && i3-msg restart && dunstify "Switched To Speakers"
+# bindsym $super+2 exec --no-startup-id pactl set-default-sink $bluetooth_sink && pactl set-sink-volume $bluetooth_sink 100% && i3-msg restart && dunstify "Switched To Bluetooth"
+# bindsym $super+3 exec --no-startup-id pactl set-default-sink $other && pactl set-sink-volume $other 40% && i3-msg restart && dunstify "Switched To Other"
 
 
 # Color shemes for windows 
