@@ -81,3 +81,11 @@ alias rp_run="$RESTICPROFILE_BASE_COMMAND backup"
 alias rp_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND schedule"
 alias rp_remove_schedule="restic_repo_unlock && $DELETE_UNWANTED_FILES || $RESTICPROFILE_BASE_COMMAND unschedule"
 alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
+
+
+#uv
+abbr uvr 'uv tool run' #run command in temporary environment
+abbr uvi 'uv tool install' 
+abbr uvu 'uv tool uninstall' 
+abbr uvl 'uv tool list'
+abbr uvus 'uv tool update-shell' # update shell
