@@ -30,11 +30,6 @@ interval = 2
 format = " $icon $running/$total "
 
 [[block]]
-block = "music"
-format = " \uf1bc {$combo.str(max_w:20) $play $next |}"
-player = "spotify"
-
-[[block]]
 block = "disk_space"
 info_type = "available"
 alert_unit = "GB"
