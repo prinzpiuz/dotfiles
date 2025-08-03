@@ -117,8 +117,7 @@ state_disconnected = "warning"
 block = "time"
 interval = 60
 [block.format]
-full = " $icon $timestamp.datetime(f:'%a %Y-%m-%d %R') "
-short = " $icon $timestamp.datetime(f:%R) "
+short = "$icon $timestamp.datetime(f:%R) "
 
 [[block]]
 block = "uptime"
