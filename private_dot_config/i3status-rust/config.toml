@@ -97,12 +97,12 @@ max_vol = 100
 block = "net"
 device = "enp4s0"
 format = " $icon 🌍 $speed_down"
-inactive_format = " $icon \uf00d "
+inactive_format = "$icon \uf00d"
 
 [[block]]
 block = "net"
 device = "wlp5s0"
-inactive_format = " $icon \uf00d "
+inactive_format = "$icon \uf00d"
 
 [[block]]
 block = "vpn"
