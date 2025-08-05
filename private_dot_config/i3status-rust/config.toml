@@ -106,15 +106,6 @@ device = "wlp5s0"
 inactive_format = "$icon \uf00d"
 
 [[block]]
-block = "vpn"
-driver = "mullvad"
-interval = 10
-format_connected = "$icon: \uf502"
-format_disconnected = "$icon: \uf3c1"
-state_connected = "good"
-state_disconnected = "warning"
-
-[[block]]
 block = "time"
 interval = 60
 [block.format]
@@ -130,3 +121,12 @@ format = " $icon $percentage "
 empty_threshold = 20
 device = "DisplayDevice"
 driver = "upower"
+
+[[block]]
+block = "vpn"
+driver = "mullvad"
+interval = 10
+format_connected = "$icon: \uf502"
+format_disconnected = "$icon: \uf3c1"
+state_connected = "good"
+state_disconnected = "warning"
