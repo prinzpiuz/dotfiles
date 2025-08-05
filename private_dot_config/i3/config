@@ -275,6 +275,9 @@ exec --no-startup-id xscreensaver &
 #audio output selector
 bindsym $mod+a exec --no-startup-id /home/prinzpiuz/bin/audio-output-menu.sh
 
+#audio output selector
+bindsym $mod+Shift+a exec --no-startup-id /home/prinzpiuz/bin/audio-output-menu.sh
+
 #to manage display
 bindsym $mod+o exec --no-startup-id /home/prinzpiuz/bin/display.sh
 
