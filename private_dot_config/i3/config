@@ -35,9 +35,7 @@ exec --no-startup-id /usr/bin/feh --bg-fill /home/prinzpiuz/debian_logo4k.png
 bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun#ssh -show drun  -theme nord -run-command "i3-msg exec '{cmd}'" -icon-theme "Papirus" -show-icons -font "DejaVu Sans 10"
 
 
-#to manage display
-bindsym $mod+Shift+s exec --no-startup-id /home/prinzpiuz/bin/manage_display
-bindsym $mod+o exec --no-startup-id /home/prinzpiuz/bin/display.sh
+
 
 # change focus
 bindsym $mod+j focus left
@@ -275,7 +273,10 @@ exec --no-startup-id /usr/bin/copyq
 exec --no-startup-id xscreensaver & 
 
 #audio output selector
-bindsym $mod+a exec --no-startup-id bash /home/prinzpiuz/bin/audio-output-menu.sh
+bindsym $mod+a exec --no-startup-id /home/prinzpiuz/bin/audio-output-menu.sh
+
+#to manage display
+bindsym $mod+o exec --no-startup-id /home/prinzpiuz/bin/display.sh
 
 # Color shemes for windows 
 set $bgcolor    #000000
