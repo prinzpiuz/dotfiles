@@ -16,6 +16,7 @@ thermometer = "\uf769"
 net_wired = "\uf6ff"
 net_wireless = "\uf1eb"
 music = "\uf001"
+docker = "\uf395"
 
 
 [[block]]
