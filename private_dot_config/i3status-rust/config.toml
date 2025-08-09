@@ -20,12 +20,15 @@ spotify = "\uf1bc"
 
 [[block]]
 block = "music"
-format = " $icon $title ($artist) "
-format_alt = " $icon $album "
-button_play_pause = 1
-button_next = 3
-button_prev = 2
-
+format = " format 1 "
+format_alt = " format 2 "
+[[block.click]]
+button = "left"
+action = "play_pause"
+[[block.click]]
+button = "middle"
+widget = "."
+action = "toggle_format"
 
 [[block]]
 block = "apt"
