@@ -19,7 +19,7 @@ net_wireless = "\uf1eb"
 
 [[block]]
 block = "music"
-format = " $icon {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
+format = " \uf001 {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
 interface_name_exclude = [".*kdeconnect.*", "mpd"]
 
 [[block]]
