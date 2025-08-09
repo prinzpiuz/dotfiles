@@ -15,24 +15,16 @@ headphones = "\uf293"
 thermometer = "\uf769"
 net_wired = "\uf6ff"
 net_wireless = "\uf1eb"
-spotify = "\uf1bc"
 
 
 [[block]]
 block = "music"
-format = " format 1 "
-format_alt = " format 2 "
-[[block.click]]
-button = "left"
-action = "play_pause"
-[[block.click]]
-button = "middle"
-widget = "."
-action = "toggle_format"
+format = " $icon {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
+interface_name_exclude = [".*kdeconnect.*", "mpd"]
 
 [[block]]
 block = "apt"
-interval = 1800
+interval = 10000
 format = " \ue60b $count updates "
 format_singular = " \ue60b One update "
 critical_updates_regex = "(linux|linux-lts|linux-zen)"
