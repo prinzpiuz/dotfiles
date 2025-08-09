@@ -17,6 +17,16 @@ net_wired = "\uf6ff"
 net_wireless = "\uf1eb"
 spotify = "\uf1bc"
 
+
+[[block]]
+block = "music"
+format = " $icon $title ($artist) "
+format_alt = " $icon $album "
+button_play_pause = 1
+button_next = 3
+button_prev = 2
+
+
 [[block]]
 block = "apt"
 interval = 1800
