@@ -20,7 +20,7 @@ music = "\uf001"
 
 [[block]]
 block = "music"
-format = " $icon {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
+format = " ♪ {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
 interface_name_exclude = [".*kdeconnect.*", "mpd"]
 
 [[block]]
