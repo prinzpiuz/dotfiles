@@ -15,11 +15,12 @@ headphones = "\uf293"
 thermometer = "\uf769"
 net_wired = "\uf6ff"
 net_wireless = "\uf1eb"
+music = "\uf001"
 
 
 [[block]]
 block = "music"
-format = " \uf001 {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
+format = " $icon {$combo.str(max_w:20,rot_interval:0.5) $play $next |}"
 interface_name_exclude = [".*kdeconnect.*", "mpd"]
 
 [[block]]
