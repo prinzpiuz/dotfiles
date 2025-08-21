@@ -56,7 +56,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
 #BLUETOOTH
-alias bt="bluetoothctl power on && bluetoothctl connect 80:C3:BA:4F:A9:94"
+alias bt="bluetoothctl power on && bluetoothctl connect 84:0F:2A:CA:8D:BC"
 alias bt_off="bluetoothctl power off"
 
 #commands to manage postgres
