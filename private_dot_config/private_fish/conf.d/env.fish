@@ -14,6 +14,8 @@ fish_add_path $ANDROID_SDK_ROOT
 fish_add_path $FLUTTER_HOME/bin
 fish_add_path $GRADLE_HOME/bin
 fish_add_path $JAVA_HOME
+fish_add_path $ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+
 
 #go
 set -x -U GOPATH $HOME/go
