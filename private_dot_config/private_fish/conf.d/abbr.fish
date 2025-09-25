@@ -1,6 +1,7 @@
 #flutter & android
 abbr sdkmanager '/usr/lib/Android/cmdline-tools/latest/bin/sdkmanager'
 abbr android 'flutter emulator --launch pixel'
+abbr adb 'platform-tools/adb'
 
 #blutooth
 abbr bt 'bluetoothctl power on && bluetoothctl connect 80:C3:BA:4F:A9:94'
