@@ -90,3 +90,7 @@ abbr uvi 'uv tool install'
 abbr uvu 'uv tool uninstall' 
 abbr uvl 'uv tool list'
 abbr uvus 'uv tool update-shell' # update shell
+
+
+#ssh
+abbr druv 'kitty +kitten ssh druv@192.168.1.10'
