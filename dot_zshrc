@@ -123,7 +123,7 @@ done
 
 for repo in $(ls ~/projects/codeNkin)
 do
-  alias $repo="cd ~/projects/hobby/$repo"
+  alias $repo="cd ~/projects/codeNkin/$repo"
 done
 
 #to auto alias activate command for virtual envs in venv directory
