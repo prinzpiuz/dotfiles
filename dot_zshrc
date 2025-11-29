@@ -1,7 +1,7 @@
 
 export ZSH="/home/prinzpiuz/.oh-my-zsh"
 
-ZSH_THEME="agnoster" 
+ZSH_THEME="agnoster"
 
 ENABLE_CORRECTION="true"
 
@@ -117,6 +117,11 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #to auto alias projects in hobby dir
 for repo in $(ls ~/projects/hobby)
+do
+  alias $repo="cd ~/projects/hobby/$repo"
+done
+
+for repo in $(ls ~/projects/codeNkin)
 do
   alias $repo="cd ~/projects/hobby/$repo"
 done
