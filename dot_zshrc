@@ -9,7 +9,7 @@ COMPLETION_WAITING_DOTS="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git git-commit sudo zsh-autosuggestions themes command-not-found aliases debian)
+plugins=(git git-commit sudo zsh-autosuggestions themes command-not-found aliases debian poetry)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,underline"
 
