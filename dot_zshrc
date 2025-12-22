@@ -106,10 +106,7 @@ export XMODIFIERS=@im=ibus
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-#librespeed cli https://github.com/librespeed/speedtest-cli
-#connecting to banglore server
-#installed in /usr/local/bin
-alias speed="~/bin/librespeed-cli-linux-amd64 --server 4 --bytes"
+
 
 #linux homebrew installation
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/prinzpiuz/.zprofile
@@ -121,9 +118,9 @@ do
   alias $repo="cd ~/projects/hobby/$repo"
 done
 
-for repo in $(ls ~/projects/kodnkin)
+for repo in $(ls ~/projects/Kodnkin)
 do
-  alias $repo="cd ~/projects/kodnkin/$repo"
+  alias $repo="cd ~/projects/Kodnkin/$repo"
 done
 
 #to auto alias activate command for virtual envs in venv directory
