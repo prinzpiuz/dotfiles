@@ -121,9 +121,9 @@ do
   alias $repo="cd ~/projects/hobby/$repo"
 done
 
-for repo in $(ls ~/projects/codeNkin)
+for repo in $(ls ~/projects/kodnkin)
 do
-  alias $repo="cd ~/projects/codeNkin/$repo"
+  alias $repo="cd ~/projects/kodnkin/$repo"
 done
 
 #to auto alias activate command for virtual envs in venv directory
@@ -217,11 +217,6 @@ alias ledger_summary="paisa serve --config $PAISA_CONFIG"
 export XDG_RUNTIME_DIR="/run/user/$UID"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 
-
-# mullvad
-alias ms="mullvad status"
-alias mc="mullvad connect"
-alias md="mullvad disconnect"
 
 # restic
 RESTIC_BASE_COMMAND="restic --verbose --repo sftp:druv@192.168.1.10:/mnt/system_backup/Workstation --password-file ~/.config/resticprofile/password.txt"
