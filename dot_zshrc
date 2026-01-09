@@ -190,6 +190,19 @@ function edit_and_apply() {
     fi
 }
 
+function kill_pid_on_port() {
+    local port=$1
+    
+    if [ -z "$port" ]; then
+        echo "Usage: kill_pid_on_port <port_number>"
+        return 1
+    fi
+
+    ss -ntlp | grep ":$port " | grep -o 'pid=[0-9]\+' | cut -d= -f2 | xargs -r kill -15
+    
+    echo "Sent kill signal to processes on port $port."
+}
+
 export PATH="$HOME/bin:$PATH"
 
 export EDITOR="code --wait"
