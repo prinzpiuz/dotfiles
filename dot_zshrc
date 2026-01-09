@@ -198,7 +198,7 @@ function kill_pid_on_port() {
         return 1
     fi
 
-    ss -ntlp | grep ":$port " | grep -o 'pid=[0-9]\+' | cut -d= -f2 | xargs -r kill -15
+    ss -ntlp | grep ":$port " | grep -o 'pid=[0-9]\+' | cut -d= -f2 | xargs -r kill -9
     
     echo "Sent kill signal to processes on port $port."
 }
