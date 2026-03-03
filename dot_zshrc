@@ -229,7 +229,7 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 
 
 # restic
-RESTIC_BASE_COMMAND="restic --verbose --repo sftp:druv@192.168.1.10:/mnt/system_backup/Workstation --password-file ~/.config/resticprofile/password.txt"
+RESTIC_BASE_COMMAND="restic --verbose --repo sftp:druv@192.168.1.7:/mnt/system_backup/Workstation --password-file ~/.config/resticprofile/password.txt"
 alias restic_repo_unlock="$RESTIC_BASE_COMMAND unlock"
 alias restic_repo_ls="$RESTIC_BASE_COMMAND snapshots"
 alias restic_list="$RESTIC_BASE_COMMAND list"
