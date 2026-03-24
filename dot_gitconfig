@@ -1,3 +1,6 @@
+[includeIf "gitdir:~/projects/work/Nuventure"]
+    path = ~/.gitconfig-nuventure
+
 [core]
 	editor = code --wait --new-window
 [pull]
