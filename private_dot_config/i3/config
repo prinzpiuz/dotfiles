@@ -219,6 +219,7 @@ assign [class="Firefox-esr"] $ws3
 assign [class="Google-chrome"] $ws3
 assign [class="Kitty"] $ws2
 assign [class="Code"] $ws1
+assign [class="nvim-ide"] $ws1
 assign [class="teams"] $ws4
 assign [class="Slack"] $ws4
 
