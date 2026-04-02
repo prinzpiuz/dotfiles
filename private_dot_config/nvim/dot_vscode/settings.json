@@ -1,0 +1,7 @@
+{
+    "stylua.targetReleaseVersion": "latest",
+    "stylua.disableVersionCheck": true,
+    "Lua.diagnostics.disable": [
+        "undefined-doc-name"
+    ]
+}
