@@ -246,3 +246,6 @@ alias rp_schedule_status="$RESTICPROFILE_BASE_COMMAND status"
 
 # xautolock toggle
 alias xt="xautolock -toggle"
+
+# open ide nvim with class assigned to it, so that it can be used with window rules in window manager
+alias ide='kitty --class nvim-ide -e nvim .'
