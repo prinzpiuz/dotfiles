@@ -28,8 +28,8 @@ return {
             ensure_installed = {
                 'delve',   -- Go
                 'debugpy', -- Python
-                'chrome',  -- Web (JS/TS/React)
-                'firefox',
+                'chrome',  -- Web (JS/TS/React) via Chrome
+                'firefox', -- Web (JS/TS/React) via Firefox
             },
         }
 
@@ -55,7 +55,6 @@ return {
         -- 1. Go
         require('dap-go').setup()
 
-        -- 2. Python
         -- 2. Python (Optimized for uv)
         local function get_python_path()
             -- Check if we are in a uv/venv environment
@@ -92,13 +91,12 @@ return {
         }
 
         -- 4. TypeScript / JavaScript / React
-        -- Uses the chrome debugger (installed via Mason)
         dap.configurations.typescript = {
             {
                 type = 'chrome',
                 request = 'attach',
                 name = 'Attach to Chrome',
-                cwd = vim.fn.getcwd(),
+                cwd = '${workspaceFolder}',
                 sourceMaps = true,
                 protocol = 'inspector',
                 port = 9222,
@@ -108,9 +106,26 @@ return {
                 type = 'chrome',
                 request = 'launch',
                 name = 'Launch Chrome',
-                url = 'http://localhost:3000', -- Change this to your React dev server port
+                url = 'http://localhost:3000',
                 webRoot = '${workspaceFolder}',
                 userDataDir = false,
+            },
+            {
+                type = 'firefox',
+                request = 'attach',
+                name = 'Attach to Firefox',
+                cwd = '${workspaceFolder}',
+                sourceMaps = true,
+                port = 6000,
+                webRoot = '${workspaceFolder}',
+            },
+            {
+                type = 'firefox',
+                request = 'launch',
+                name = 'Launch Firefox',
+                url = 'http://localhost:3000',
+                webRoot = '${workspaceFolder}',
+                firefoxExecutable = 'firefox',
             },
         }
         dap.configurations.javascript = dap.configurations.typescript
