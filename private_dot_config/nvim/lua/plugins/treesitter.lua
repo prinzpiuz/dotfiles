@@ -4,29 +4,7 @@ return {
     lazy = false,
     build = ':TSUpdate',
     branch = 'main',
-    dependencies = {
-        'nvim-treesitter/nvim-treesitter-textobjects',
-    },
     config = function()
-        require('nvim-treesitter.configs').setup {
-            textobjects = {
-                select = {
-                    enable = true,
-                    lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-                    keymaps = {
-                        ['af'] = { query = '@function.outer', desc = 'Around a function' },
-                        ['if'] = { query = '@function.inner', desc = 'Inner part of a function' },
-                        ['ac'] = { query = '@class.outer', desc = 'Around a class' },
-                        ['ic'] = { query = '@class.inner', desc = 'Inner part of a class' },
-                        ['ai'] = { query = '@conditional.outer', desc = 'Around a condition (if/else)' },
-                        ['ii'] = { query = '@conditional.inner', desc = 'Inner part of a condition' },
-                        ['al'] = { query = '@loop.outer', desc = 'Around a loop' },
-                        ['il'] = { query = '@loop.inner', desc = 'Inner part of a loop' },
-                    },
-                },
-            },
-        }
-
         -- Ensure basic parsers are installed
         local parsers = {
             'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown',
