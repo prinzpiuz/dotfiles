@@ -8,7 +8,7 @@ return {
         -- Ensure basic parsers are installed
         local parsers = {
             'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown',
-            'markdown_inline', 'query', 'vim',
+            'markdown_inline', 'query', 'vim', 'vimdoc',
             'python', 'go', 'dart', 'dockerfile', 'yaml', 'toml'
         }
         require('nvim-treesitter').install(parsers)
