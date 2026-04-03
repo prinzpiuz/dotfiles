@@ -48,7 +48,7 @@ return {
                     highlight_inactive_windows = false,
                 },
             })
-            vim.cmd.colorscheme("Onedark Dark")
+            vim.cmd.colorscheme("onedark dark")
         end,
     },
 }
