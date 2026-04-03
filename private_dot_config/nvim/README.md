@@ -6,7 +6,7 @@ A personal Neovim setup built on [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ### Neovim
 
-- Neovim >= 0.10
+- Neovim >= 0.12
 
 ### System dependencies
 
@@ -24,6 +24,7 @@ A personal Neovim setup built on [lazy.nvim](https://github.com/folke/lazy.nvim)
 | `fd` | Telescope file finder (faster alternative to find) |
 | `chromium` or `google-chrome` | Chrome DAP for JS/TS debugging |
 | A [Nerd Font](https://www.nerdfonts.com/) | Icons throughout the UI |
+| tree-sitter-cli | cargo install tree-sitter-cli |
 
 ### Automatically installed via Mason
 
