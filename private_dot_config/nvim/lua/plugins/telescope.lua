@@ -11,7 +11,8 @@ return {
             cond = function() return vim.fn.executable 'make' == 1 end,
         },
         { 'nvim-telescope/telescope-ui-select.nvim' },
-        { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+        { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
+        { 'ahmedkhalf/project.nvim' },
     },
     config = function()
         require('telescope').setup {
@@ -23,6 +24,8 @@ return {
         -- Enable Telescope extensions if they are installed
         pcall(require('telescope').load_extension, 'fzf')
         pcall(require('telescope').load_extension, 'ui-select')
+        pcall(require('telescope').load_extension, 'projects')
+
 
         local builtin = require 'telescope.builtin'
         vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
@@ -36,6 +39,7 @@ return {
         vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
         vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+        vim.keymap.set('n', '<leader>fp', telescope.extensions.projects.projects, { desc = '[F]ind [P]rojects' })
 
         -- LSP-aware keymaps (set on attach per buffer)
         vim.api.nvim_create_autocmd('LspAttach', {
