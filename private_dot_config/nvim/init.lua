@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("config.autocmds")
 require('lazy').setup({
+    rocks = { enabled = false },
     spec = {
         -- Import all files in the lua/plugins directory
         { import = 'plugins' },
