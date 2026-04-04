@@ -1,4 +1,4 @@
--- General 
+-- General
 vim.g.mapleader = " "
 vim.g.have_nerd_font = true
 
@@ -12,6 +12,19 @@ vim.opt.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
+-- Use CopyQ as clipboard provider
+vim.g.clipboard = {
+    name = 'CopyQ',
+    copy = {
+        ['+'] = { 'copyq', 'copy' },
+        ['*'] = { 'copyq', 'copy' },
+    },
+    paste = {
+        ['+'] = { 'copyq', 'clipboard' },
+        ['*'] = { 'copyq', 'clipboard' },
+    },
+    cache_enabled = 0,
+}
 vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
 -- Enable break indent
