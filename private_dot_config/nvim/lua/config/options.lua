@@ -16,8 +16,8 @@ vim.opt.showmode = false
 vim.g.clipboard = {
     name = 'CopyQ',
     copy = {
-        ['+'] = { 'copyq', 'copy' },
-        ['*'] = { 'copyq', 'copy' },
+        ['+'] = { 'copyq', 'copy', '-' },
+        ['*'] = { 'copyq', 'copy', '-' },
     },
     paste = {
         ['+'] = { 'copyq', 'clipboard' },
