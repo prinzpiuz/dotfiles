@@ -96,3 +96,6 @@ abbr uvus 'uv tool update-shell' # update shell
 #ssh
 abbr druv 'kitty +kitten ssh druv@192.168.1.7'
 abbr vps 'kitty +kitten ssh prinzpiuz@blotils.prinzpiuz.in'
+
+#use bat instead of cat
+alias cat='bat --style=numbers --color=always'

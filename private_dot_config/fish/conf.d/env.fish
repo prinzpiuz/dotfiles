@@ -50,3 +50,15 @@ set --universal --export DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bu
 #ledger
 set --universal --export PAISA_CONFIG "/home/prinzpiuz/Notes/Notes/Finance/paisa/paisa.yaml"
 set --universal --export LEDGER "/home/prinzpiuz/Notes/Notes/Finance/paisa/main.ledger"
+
+#fzf
+# Use fd instead of find for speed and to respect .gitignore
+set -gx FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+
+# Set colors to match your Kitty/i3 theme (optional)
+set -gx FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
+
+# Enable previews using 'bat'
+set -gx FZF_ENABLE_OPEN_PREVIEW 1
+set -gx FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :500"
