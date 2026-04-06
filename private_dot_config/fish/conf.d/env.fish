@@ -59,6 +59,9 @@ set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 # Set colors to match your Kitty/i3 theme (optional)
 set -gx FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
 
+# This makes fzf show a nice eza tree view when you highlight a directory
+set -gx FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
+
 # Enable previews using 'bat'
 set -gx FZF_ENABLE_OPEN_PREVIEW 1
 set -gx FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :500"
