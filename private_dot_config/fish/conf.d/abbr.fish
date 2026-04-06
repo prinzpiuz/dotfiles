@@ -37,8 +37,6 @@ abbr search 'apt search'
 abbr p 'ping -i 1 -c 5 -w 30 -q 8.8.8.8'
 abbr nd 'sudo chattr +i'
 abbr un 'sudo chattr -i'
-# abbr ll 'eza --long --all  --header --git --icons --color=always --group-directories-first'
-abbr list_with_size 'eza --long --all  --header --git --icons --total-size --color=always --group-directories-first'
 
 #kitty
 abbr pic 'kitty +kitten icat'
@@ -99,3 +97,11 @@ abbr vps 'kitty +kitten ssh prinzpiuz@blotils.prinzpiuz.in'
 
 #use bat instead of cat
 alias cat='bat --style=numbers --color=always'
+
+#eza
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -lh --icons --group-directories-first'
+alias la='eza -a --icons --group-directories-first'
+alias lt='eza --tree --level=2 --icons'
+alias lla='eza -lah --icons --group-directories-first'
+alias list_with_size='eza --long --all  --header --git --icons --total-size --color=always --group-directories-first'
