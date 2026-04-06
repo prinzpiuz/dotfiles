@@ -65,3 +65,7 @@ set -gx FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 # Enable previews using 'bat'
 set -gx FZF_ENABLE_OPEN_PREVIEW 1
 set -gx FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :500"
+
+
+#vivid color scheme
+set -gx LS_COLORS (vivid generate solarized-dark)
