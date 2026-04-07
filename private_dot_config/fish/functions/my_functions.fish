@@ -43,22 +43,6 @@ end
 
 
 
-#to auto alias projects in work dir
-function auto_alias_project_directories
-    repos=(
-        "hobby"
-        "work/Nuventure"
-        "Kodnkin"
-    )
-    for repo in $repos
-        for subrepo in (find ~/projects/$repo -maxdepth 1 -type d -printf '%f\n')
-            if test "$subrepo" != "." -a "$subrepo" != ".."
-                alias $subrepo "cd ~/projects/$repo/$subrepo"
-            end
-        end
-    end
-end
-
 #kill process by port
 function pk
     if test -z "$argv[1]"
