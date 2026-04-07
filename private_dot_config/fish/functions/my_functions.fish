@@ -42,6 +42,28 @@ function edit_and_apply
 end
 
 
+#activate virtual environment if exists in the current directory
+function auto_activate_venv
+    if test -f ".venv/bin/activate.fish"
+        source ".venv/bin/activate.fish"
+    end
+end
+
+
+# Auto-alias project directories
+function auto_alias_project_directories
+    set repos "hobby" "work/Nuventure" "Kodnkin"
+
+    for repo in $repos
+        set repo_path ~/projects/$repo
+        
+        if test -d $repo_path
+            for subrepo in (find $repo_path -maxdepth 1 -mindepth 1 -type d -printf '%f\n')
+                abbr -a $subrepo "cd $repo_path/$subrepo && auto_activate_venv"
+            end
+        end
+    end
+end
 
 #kill process by port
 function pk
