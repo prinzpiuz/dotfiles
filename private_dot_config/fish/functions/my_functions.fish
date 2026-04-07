@@ -41,37 +41,29 @@ function edit_and_apply
     end
 end
 
-#to auto alias projects in hobby dir
-function auto_alias_project_directories 
-    for repo in (find ~/projects/hobby -maxdepth 1 -type d -printf '%f\n')
-        if test "$repo" != "." -a "$repo" != ".."
-            alias $repo "cd ~/projects/hobby/$repo"
+
+
+#to auto alias projects in work dir
+function auto_alias_project_directories
+    repos=(
+        "hobby"
+        "work/Nuventure"
+        "Kodnkin"
+    )
+    for repo in $repos
+        for subrepo in (find ~/projects/$repo -maxdepth 1 -type d -printf '%f\n')
+            if test "$subrepo" != "." -a "$subrepo" != ".."
+                alias $subrepo "cd ~/projects/$repo/$subrepo"
+            end
         end
     end
 end
 
-function activate_venv
-  if test -z "$argv[1]"
-    echo "Usage: activate_venv <venv_name>"
-    return 1
-  end
-  set venv_name $argv[1]
-  if test -d ~/venvs/$venv_name
-    source ~/venvs/$venv_name/bin/activate.fish
-    set -l old_venv $VIRTUAL_ENV
-    set -gx VIRTUAL_ENV $venv_name
-    if test -n $old_venv -a $old_venv != $VIRTUAL_ENV
-      echo "Deactivated virtualenv '$old_venv'."
-    end
-    echo "Activated virtualenv '$venv_name'."
-  else
-    echo "Error: Virtual environment '$venv_name' not found in ~/venvs."
-    return 1
-  end
-end
-
-function auto_alias_virtual_envs
-    for venv in (ls ~/venvs)
-    alias "$venv""env" "source ~/venvs/$venv/bin/activate.fish ; set -l old_venv \$VIRTUAL_ENV ; set -gx VIRTUAL_ENV $venv ; if test -n \$old_venv ; and test \$old_venv != \$VIRTUAL_ENV ; echo \"Deactivated virtualenv '\$old_venv'.\" ; end ; echo \"Activated virtualenv '$venv'.\""
+#kill process by port
+function pk
+    if test -z "$argv[1]"
+        echo "Usage: kill_process_by_port <port>"
+    else 
+        fuser -k "$argv[1]/tcp"
     end
 end
