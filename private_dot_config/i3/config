@@ -85,9 +85,9 @@ bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "VScode"
-set $ws2 "Kitty"
-set $ws3 "Chrome"
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
 set $ws4 "Notes"
 set $ws5 "Misc"
 set $ws6 "Files"
@@ -245,6 +245,9 @@ exec --no-startup-id /home/prinzpiuz/.local/kitty.app/bin/kitty --single-instanc
 
 #to making android emulator floating
 for_window [title="^Android Emulator -"] floating enable
+
+#copy made floating
+for_window [class="copyq"] floating enable, sticky enable, resize set 600 400, move scratchpad
 
 # move floating windows with keys
 bindsym $mod+m mode "move" focus floating
