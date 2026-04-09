@@ -48,8 +48,8 @@ set --universal --export XDG_RUNTIME_DIR "/run/user/$UID"
 set --universal --export DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bus"
 
 #ledger
-set --universal --export PAISA_CONFIG "/home/prinzpiuz/Notes/Notes/Finance/paisa/paisa.yaml"
-set --universal --export LEDGER "/home/prinzpiuz/Notes/Notes/Finance/paisa/main.ledger"
+set --universal --export PAISA_CONFIG "$HOME/prinzpiuz-notes/prinzpiuz-notes/Notes/Finance/paisa/paisa.yaml"
+set --universal --export LEDGER "$HOME/prinzpiuz-notes/prinzpiuz-notes/Notes/Finance/paisa/main.ledger"
 
 #fzf
 # Use fd instead of find for speed and to respect .gitignore
