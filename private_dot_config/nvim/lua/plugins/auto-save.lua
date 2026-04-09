@@ -1,5 +1,5 @@
 return {
-    "chaozlow/auto-save.nvim",
+    "okuuuu/auto-save.nvim",
     config = function()
         require("auto-save").setup({
             enabled = true,
