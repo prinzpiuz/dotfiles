@@ -246,8 +246,7 @@ exec --no-startup-id /home/prinzpiuz/.local/kitty.app/bin/kitty --single-instanc
 #to making android emulator floating
 for_window [title="^Android Emulator -"] floating enable
 
-#copy made floating
-for_window [class="copyq"] floating enable, sticky enable, resize set 600 400, move scratchpad
+
 
 # move floating windows with keys
 bindsym $mod+m mode "move" focus floating
@@ -272,6 +271,8 @@ mode "move" {
 
 #copyq for clipboard management
 exec --no-startup-id /usr/bin/copyq
+#copy made floating
+for_window [class="copyq"] floating enable, sticky enable, resize set 600 400, move scratchpad
 
 #start Xscrennsaver
 exec --no-startup-id xscreensaver & 
