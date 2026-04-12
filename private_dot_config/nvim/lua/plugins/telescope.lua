@@ -12,26 +12,17 @@ return {
         },
         { 'nvim-telescope/telescope-ui-select.nvim' },
         { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
-        { 'nvim-telescope/telescope-project.nvim' },
     },
     config = function()
         require('telescope').setup {
             extensions = {
                 ['ui-select'] = { require('telescope.themes').get_dropdown() },
-                project = {
-                    base_dirs = {
-                        '~/projects',
-                    },
-                    hidden_files = true,
-                    sync_with_nvim_tree = false,
-                },
             },
         }
 
         -- Enable Telescope extensions if they are installed
         pcall(require('telescope').load_extension, 'fzf')
         pcall(require('telescope').load_extension, 'ui-select')
-        pcall(require('telescope').load_extension, 'project')
 
 
         local builtin = require 'telescope.builtin'
@@ -46,10 +37,6 @@ return {
         vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
         vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-        vim.keymap.set('n', '<leader>fp',
-            function()
-                require('telescope').extensions.project.project {}
-            end, { desc = '[F]ind [P]rojects' })
 
         -- LSP-aware keymaps (set on attach per buffer)
         vim.api.nvim_create_autocmd('LspAttach', {
