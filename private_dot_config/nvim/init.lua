@@ -1,13 +1,6 @@
 require("config.options")
 require("config.keymaps")
 
--- Backwards compatibility for Neovim 0.8 and earlier
-if not vim.lsp.buf_get_clients then
-    vim.lsp.buf_get_clients = function(bufnr)
-        return vim.lsp.get_clients({ buffer = bufnr })
-    end
-end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
     vim.fn.system({
