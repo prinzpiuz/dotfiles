@@ -14,6 +14,20 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function() vim.hl.on_yank() end,
 })
 
+-- Auto-save when leaving insert mode or after text changes
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+    callback = function(args)
+        if vim.bo[args.buf].buftype == "" and vim.bo[args.buf].modified then
+            vim.defer_fn(function()
+                if vim.api.nvim_buf_is_valid(args.buf) and vim.bo[args.buf].modified then
+                    vim.api.nvim_buf_call(args.buf, function()
+                        vim.cmd("silent! write")
+                    end)
+                end
+            end, 1000)
+        end
+    end,
+})
 
 vim.filetype.add({
     filename = {
