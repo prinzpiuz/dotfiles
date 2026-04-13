@@ -87,3 +87,6 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.opt.confirm = true
+
+-- Disable swap files, which can cause issues with some plugins and are generally not needed with modern backup and undo features.
+vim.opt.swapfile = false
