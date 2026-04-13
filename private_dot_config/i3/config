@@ -38,10 +38,14 @@ bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun#ssh -show drun 
 
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Cycle through active workspaces (like :bnext / :bprev)
+bindsym $mod+ctrl+l workspace next
+bindsym $mod+ctrl+h workspace prev
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -62,10 +66,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+ctrl+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+ctrl+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
