@@ -1,15 +1,22 @@
 -- File navigation
 return {
     'stevearc/oil.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }, -- Optional: for file icons
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         require('oil').setup({
-            columns = { "icon" },   -- Shows icons if you have a Nerd Font
+            columns = { "icon" },
             view_options = {
-                show_hidden = true, -- Very useful for .env and .gitignore files
+                show_hidden = true,
             },
+            keymaps = {
+                ["<C-v>"] = { "actions.select", opts = { vertical = true } },
+                ["<C-x>"] = { "actions.select", opts = { horizontal = true } },
+                ["<C-t>"] = { "actions.select", opts = { tab = true } },
+                ["<C-p>"] = "actions.preview",
+                ["<C-r>"] = "actions.refresh",
+            },
+            skip_confirm_for_simple_edits = true,
         })
-        -- Open oil with '-' (a common and very fast convention)
         vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
     end
 }
