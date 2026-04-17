@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/home/prinzpiuz/.config/nvim/lua/plugins/debug.lua:*)"
+    ]
+  }
+}
