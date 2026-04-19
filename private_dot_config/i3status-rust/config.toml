@@ -75,7 +75,7 @@ format = " $icon "
 
 [[block]]
 block = "custom"
-command = ''' /home/prinzpiuz/.local/bin/bluetooth_battery 84:0F:2A:CA:8D:BC | awk '{ print $6 }' '''
+command = ''' /home/prinzpiuz/.local/bin/bluetooth_battery 80:C3:BA:4F:A9:94 | awk '{ print $6 }' '''
 format = " \uf5df $text.pango-str() "
 
 [[block]]
