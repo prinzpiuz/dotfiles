@@ -16,8 +16,8 @@
 [rebase]
     autoStash = true
 
-[rerere]
-    enabled = true
+# [rerere]
+#     enabled = true
 
 [diff]
     tool = nvimdiff
@@ -39,7 +39,7 @@
 
 [merge]
     tool = nvimdiff
-    conflictstyle = zdiff3
+    # conflictstyle = zdiff3
 
 [mergetool]
     prompt = false
