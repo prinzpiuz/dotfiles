@@ -298,5 +298,5 @@ client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcol
 
 # Send Ctrl+Tab to the browser even if a PDF is focused
 # This works specifically when Firefox/Chrome is the active window
-bindsym $mod+Shift+j exec xdotool key --window $(xdotool getactivewindow) ctrl+Tab
-bindsym $mod+Shift+k exec xdotool key --window $(xdotool getactivewindow) ctrl+shift+Tab
+bindsym $mod+Shift+J exec xdotool key --window $(xdotool getactivewindow) ctrl+Tab
+bindsym $mod+Shift+K exec xdotool key --window $(xdotool getactivewindow) ctrl+shift+Tab
