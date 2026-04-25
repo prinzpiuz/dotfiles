@@ -294,9 +294,3 @@ client.focused          $bgcolor        $bgcolor        $text           $indicat
 client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor 
-
-
-# Send Ctrl+Tab to the browser even if a PDF is focused
-# This works specifically when Firefox/Chrome is the active window
-bindsym $mod+Shift+J exec xdotool key --window $(xdotool getactivewindow) ctrl+Tab
-bindsym $mod+Shift+K exec xdotool key --window $(xdotool getactivewindow) ctrl+shift+Tab
