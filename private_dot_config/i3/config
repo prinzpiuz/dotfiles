@@ -53,12 +53,6 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -300,3 +294,9 @@ client.focused          $bgcolor        $bgcolor        $text           $indicat
 client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor 
+
+
+# Send Ctrl+Tab to the browser even if a PDF is focused
+# This works specifically when Firefox/Chrome is the active window
+bindsym $mod+Shift+j exec xdotool key --window $(xdotool getactivewindow) ctrl+Tab
+bindsym $mod+Shift+k exec xdotool key --window $(xdotool getactivewindow) ctrl+shift+Tab
