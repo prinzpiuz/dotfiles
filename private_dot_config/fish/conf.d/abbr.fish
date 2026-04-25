@@ -65,7 +65,6 @@ abbr balance 'ledger -f $LEDGER balance'
 abbr ledger_summary 'paisa serve --config $PAISA_CONFIG'
 
 #python
-abbr run 'python manage.py runserver || flutter run'
 abbr Ipython3 'python3 -m IPython'
 
 #restic
