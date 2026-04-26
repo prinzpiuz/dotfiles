@@ -1,9 +1,13 @@
 [diff]
-    command = "code"
-    args = ["--wait", "--diff", "{{ .Destination }}", "{{ .Target }}"]
+    command = "nvim"
+    args = ["-d", "{{ .Destination }}", "{{ .Target }}"]
 [merge]
-    command = "code"
-    args = ["--wait", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
+    command = "nvim"
+    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
 [edit]
-    command = "code"
-    args = ["--wait"]
+    command = "nvim"
+[git]
+    autoCommit = true
+    autoPush = true
+[status]
+    pathStyle = "relative"
