@@ -12,12 +12,16 @@ return {
                 position = "right",
                 width = 40,
             },
+            mappings = {
+            ["<C-h>"] = false,
+            ["<C-l>"] = false,
+        },
             filesystem = {
                 follow_current_file = { enabled = true },
                 filtered_items = {
                     visible = true,
                     hide_dotfiles = false,
-                    hide_gitignored = false,
+                    hide_gitignored = true,
                 },
             },
         })
