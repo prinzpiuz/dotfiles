@@ -4,7 +4,7 @@ local map = vim.keymap.set
 --  See `:help vim.keymap.set()`
 
 -- File explorer
-map("n", "<leader>e", "<cmd>Oil<CR>")
+-- map("n", "<leader>e", "<cmd>Oil<CR>")
 
 -- Find files
 map("n", "<leader>f", "<cmd>Telescope find_files<CR>")
