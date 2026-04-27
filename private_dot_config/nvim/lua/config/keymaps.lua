@@ -4,6 +4,7 @@ local map = vim.keymap.set
 --  See `:help vim.keymap.set()`
 
 -- File explorer
+-- commented becuase neo-tree plugin use same keymap
 -- map("n", "<leader>e", "<cmd>Oil<CR>")
 
 -- Find files
