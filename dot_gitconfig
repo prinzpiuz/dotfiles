@@ -19,6 +19,7 @@
 # Continue the Rebase: Run git rebase --continue
 # If you want to abort the rebase and return to the state before the rebase started, you can run:
 # git rebase --abort
+# after successfull rebase, since history is re-written we need to do git push --force-with-lease
 #Note: If you had multiple commits that conflict, Git might pause again for the next one. Repeat these steps until the rebase is finished
 
 [rebase]
