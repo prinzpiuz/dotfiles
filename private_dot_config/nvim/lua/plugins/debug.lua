@@ -76,7 +76,7 @@ return {
         require('dap-python').setup(get_python_path())
         -- uv run uvicorn app.main:create_app --factory --reload --port 8000
         table.insert(dap.configurations.python, {
-            type = 'debugpy',
+            type = 'python',
             request = 'launch',
             name = 'FastAPI',
             module = 'uvicorn',
