@@ -74,6 +74,17 @@ return {
         end
 
         require('dap-python').setup(get_python_path())
+        -- uv run uvicorn app.main:create_app --factory --reload --port 8000
+        table.insert(dap.configurations.python, {
+            type = 'debugpy',
+            request = 'launch',
+            name = 'FastAPI',
+            module = 'uvicorn',
+            args = { 'app.main:create_app','--factory', '--reload', '--port', '8000' },
+            jinja = true,
+            cwd = '${workspaceFolder}',
+            pythonPath = get_python_path,
+        })
 
         -- 3. Dart / Flutter
         -- Note: Dart usually requires the Flutter tools to be set up.
