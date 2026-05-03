@@ -14,6 +14,12 @@ return {
         --  - sr)'  - [S]urround [R]eplace [)] [']
         require('mini.surround').setup()
 
+require('mini.indentscope').setup({
+    symbol = '│',
+    options = {
+        try_as_border = true,
+    },
+})
         -- Simple and easy statusline.
         local statusline = require('mini.statusline')
         statusline.setup({
@@ -41,6 +47,6 @@ return {
                 })
             end,
         },
-})
+        })
     end,
 }
