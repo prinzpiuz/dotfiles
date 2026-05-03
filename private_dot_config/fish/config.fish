@@ -5,4 +5,4 @@ source $HOME/.config/fish/functions/my_functions.fish
 
 
 auto_alias_project_directories
-
+fish_vi_key_bindings
