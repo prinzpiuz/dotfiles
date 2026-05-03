@@ -1,0 +1,101 @@
+I have learned hjkl
+h is to go leftward and j is to downwards and k help to upwards and l helps to move rightwards
+we can use the reletive number + h/j/k/l to jumb to location
+10j means to jumb to relative location numbered 10
+similary for horizontally moving use
+f<char> move horizontally to char location, ; to next occurance "," for previous occurance
+
+
+i - insert at current cursor point
+a - place the cursor after current char in insert mode
+o - place the cursor at new line in insert mode
+I - insert at the start of line
+A - insert at the end of Line
+
+also i learned W, E, B, 
+    w is for word by word movement, cursor jumb between start of each word
+    e is also same but cursor will jumb between end of each words
+    b is also same but custsor will move backwords
+
+for undo just do u
+for redo ctrl + r
+
+for going into function defention use grd
+for going back from defenition use ctrl + o and for going again into defenitio/previous location where cursor was use ctrl + i
+
+for deleteing a letter by letter in normal mode use x (delete char in front) X (delete char before cursor)
+
+(search in file/current budffer)
+for searching, in file use SPACE + /
+for searching, in :<search> (vim)
+for searching, the word under cursor forward press *
+for searching the word under cursor backward press #
+
+(seacrch in whole project)
+SPACE + sg
+SPACE  + sw search word under cursor
+
+automatic updates of variable changes
+Rename globally - grn
+find references - grr
+
+r - to replace the cursor
+eg: vi"rp this means, replace everthing visually selected inside " with char p
+c - to change under cursor and imedialtly enter insert mode
+cc to change entire line
+cw to change word
+
+gg to go to the top of file
+G for to go to the bottom of file
+<line number>G to go to the line number
+0 to go to the start of line
+$ to go to the end of line
+
+
+n for next in all cases
+N for going to previous in all cases
+
+difference between cc and dd
+cc is for changing line, it respects the indentation and after removing line automatically enters insert mode
+dd is for deleting/cutting line, we can use it for pasting, also after deleting/cutting it will be in normal mode
+
+i in any command like vi", bi", di", yi" means INNER, select the inner items in the spcified char, here it means select everything inside double quotes
+a in any command means AROUND, so va" means select around the double quotes including double quotes
+t in any command means TILL, so vt" means visaully select from current cursor point till quotes
+
+~ means toggle the case, UPPER to lower and lower to UPPER
+> after visually selecting a code block use > to move code block right
+< similary to move code block a tab right left
+
+saiw" - surrond add inner word with '"' (mini.sorround plugin)
+vi" - visually select inner of ""
+va" - visually select around of "" including "
+
+MACROS in nvim
+qa -  to start key capturing
+q -  to stop capturing
+@a - to replay
+@@ - replay again
+3@a - if you want to replay three times
+
+[d - To open diagnotstics 
+]d - To open previous diagnotstics
+gra -  for code actions
+K - to see hover documentation
+
+git integration plugin
+[c - to do hunk navigation
+]c -  to go previous
+<leader> hb - to see who changed this line last
+<leader> hd -  to see the diff against index, and use [c or ]c to navigate between diffs
+
+auto completion
+ctrl+ n/p to navigate through completion menu
+ctrk + y to select from completion
+ctrl + e to dismiss the completion menu
+ctrl + SPACE to manually show completion menu
+
+Commenting code
+gc -  to commend a code in visual mode
+gcc -  to comment current line in normal mode
+gc3j -  means comment down 3 lines below
