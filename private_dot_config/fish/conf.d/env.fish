@@ -8,7 +8,7 @@ fish_add_path $HOME/go/bin
 set --universal --export ANDROID_HOME /usr/lib/Android
 set --universal --export ANDROID_SDK_ROOT /usr/lib/Android
 set --universal --export FLUTTER_HOME /usr/local/bin/flutter
-set --universal --export CHROME_EXECUTABLE /usr/bin/firefox
+set --universal --export CHROME_EXECUTABLE /usr/bin/google-chrome-stable
 set --universal --export GRADLE_HOME /opt/gradle/gradle-7.5.1
 set --universal --export JAVA_HOME (dirname (dirname (readlink -f (which java))))    
 fish_add_path $ANDROID_HOME/platform-tools
