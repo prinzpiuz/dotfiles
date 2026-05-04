@@ -9,8 +9,8 @@ return {
 	config = function()
 		require("neo-tree").setup({
 			window = {
-				position = "left",
-				width = 30,
+				position = "right",
+				width = 40,
 				mappings = {
 					["<C-h>"] = "none",
 					["<C-l>"] = "none",
