@@ -18,7 +18,6 @@ return {
 					["<C-k>"] = "none",
 				},
 			},
-			open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
 			filesystem = {
 				follow_current_file = { enabled = true },
 				filtered_items = {
@@ -26,11 +25,7 @@ return {
 					hide_dotfiles = false,
 					hide_gitignored = false,
 				},
-				window = {
-					mappings = {
-						["<CR>"] = "open_drop",
-					},
-				},
+				bind_to_cwd = false,
 			},
 		})
 		vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggle file tree" })
