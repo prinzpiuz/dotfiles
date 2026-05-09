@@ -3,7 +3,6 @@ return {
 	lazy = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"stevearc/dressing.nvim",
 	},
 	config = function()
 		require("flutter-tools").setup({
@@ -20,10 +19,6 @@ return {
 				prefix = "// ",
 			},
 			lsp = {
-				color = {
-					enabled = true,
-					virtual_text = true,
-				},
 				settings = {
 					showTodos = true,
 					completeFunctionCalls = true,
