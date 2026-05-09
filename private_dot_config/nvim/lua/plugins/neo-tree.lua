@@ -29,6 +29,6 @@ return {
 				bind_to_cwd = false,
 			},
 		})
-		vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggle file tree" })
+		vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle dir=./<CR>", { desc = "Toggle file tree" })
 	end,
 }
