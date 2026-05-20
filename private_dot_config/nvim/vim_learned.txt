@@ -31,6 +31,13 @@ for searching, in :<search> (vim)
 for searching, the word under cursor forward press *
 for searching the word under cursor backward press #
 
+for search and replace use, :%s/old_word/new_word/g
+    : Enters Command-line mode.
+    %: Specifies the range as the entire file.
+    s: The substitute command.
+    /old_word/new_word/: The search pattern and the replacement text.
+    g: The global flag, which ensures every instance on a single line is replaced (without it, only the first occurrence per line is changed).
+
 (seacrch in whole project)
 SPACE + sg
 SPACE  + sw search word under cursor
