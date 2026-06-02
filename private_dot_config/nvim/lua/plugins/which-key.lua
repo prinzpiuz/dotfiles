@@ -14,6 +14,7 @@ return {
 			{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 			{ "gr", group = "LSP Actions", mode = { "n" } },
 			{ "<leader>F", group = "[F]lutter" },
+			{ "<leader>D", group = "[D]atabase" },
 		},
 	},
 }
