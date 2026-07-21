@@ -71,7 +71,7 @@ abbr run 'python manage.py runserver || flutter run'
 abbr Ipython3 'python3 -m IPython'
 
 #restic
-set RESTIC_BASE_COMMAND "restic --verbose --repo sftp:druv@192.168.1.7:/mnt/system_backup/Personal --password-file ~/.config/resticprofile/password.txt"
+set RESTIC_BASE_COMMAND "restic --verbose --repo sftp:druv@192.168.2.154:/mnt/system_backup/Personal --password-file ~/.config/resticprofile/password.txt"
 set DELETE_UNWANTED_FILES sudo "rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
 set RESTICPROFILE_BASE_COMMAND "sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
 alias restic_repo_unlock="$RESTIC_BASE_COMMAND unlock"
@@ -94,5 +94,5 @@ abbr uvus 'uv tool update-shell' # update shell
 
 
 #ssh
-abbr druv 'kitty +kitten ssh druv@192.168.1.7'
+abbr druv 'kitty +kitten ssh druv@192.168.2.154'
 abbr vps 'kitty +kitten ssh prinzpiuz@blotils.prinzpiuz.in'
