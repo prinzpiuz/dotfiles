@@ -68,7 +68,7 @@ abbr ledger_summary 'paisa serve --config $PAISA_CONFIG'
 abbr Ipython3 'python3 -m IPython'
 
 #restic
-set RESTIC_BASE_COMMAND "restic --verbose --repo sftp:druv@192.168.1.7:/mnt/system_backup/Workstation --password-file ~/.config/resticprofile/password.txt"
+set RESTIC_BASE_COMMAND "restic --verbose --repo sftp:druv@192.168.2.154:/mnt/system_backup/Workstation --password-file ~/.config/resticprofile/password.txt"
 set DELETE_UNWANTED_FILES sudo "rm -rf /tmp/resticprofile-profile-src.lock && rm -rf /home/prinzpiuz/.config/resticprofile/log/*"
 set RESTICPROFILE_BASE_COMMAND "sudo resticprofile --config /home/prinzpiuz/.config/resticprofile/profiles.conf --name 'default'"
 alias restic_repo_unlock="$RESTIC_BASE_COMMAND unlock"
