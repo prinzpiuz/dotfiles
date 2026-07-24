@@ -1,1 +1,3 @@
 /home/prinzpiuz/.local/kitty.app/bin/kitty --title=math_python
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+
