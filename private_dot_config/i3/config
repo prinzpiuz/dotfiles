@@ -29,7 +29,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 #wallpaper
-exec --no-startup-id /usr/bin/feh --bg-fill /home/prinzpiuz/debian_logo4k.png
+exec --no-startup-id /usr/bin/feh --bg-fill /home/prinzpiuz/solarSystem4k.png
 
 
 bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun#ssh -show drun  -theme nord -run-command "i3-msg exec '{cmd}'" -icon-theme "Papirus" -show-icons -font "DejaVu Sans 10"
@@ -175,12 +175,15 @@ default_floating_border pixel 0
 
 
 #to lock screen
-bindsym $mod+9 exec /home/prinzpiuz/bin/start-Xscreensaver.sh
-exec xautolock -detectsleep -time 60 -locker "i3lock -i debian_logo4k.png"
+# Manual lock
+bindsym $mod+9 exec --no-startup-id betterlockscreen -l dim
+
+# Auto-lock after 60s idle, and on sleep
+exec --no-startup-id xautolock -detectsleep -time 1 -locker "betterlockscreen -l dim"
+exec --no-startup-id xss-lock -- betterlockscreen -l dim
 
 #auto start application
 exec --no-startup-id tlp
-exec --no-startup-id /usr/bin/kdeconnect-indicator
 
 set $Locker i3lock && sleep 1
 
