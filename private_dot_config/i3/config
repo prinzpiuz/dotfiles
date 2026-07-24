@@ -179,8 +179,8 @@ default_floating_border pixel 0
 bindsym $mod+9 exec --no-startup-id betterlockscreen -l dim
 
 # Auto-lock after 60s idle, and on sleep
-exec --no-startup-id xautolock -detectsleep -time 1 -locker "betterlockscreen -l dim"
-exec --no-startup-id xss-lock -- betterlockscreen -l dim
+exec --no-startup-id xautolock -detectsleep -time 1 -locker "betterlockscreen -l"
+exec --no-startup-id xss-lock -- betterlockscreen -l
 
 #auto start application
 exec --no-startup-id tlp
