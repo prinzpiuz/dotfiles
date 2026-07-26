@@ -96,7 +96,7 @@ max_vol = 100
 
 [[block]]
 block = "net"
-device = "enp4s0"
+device = "enx6c1ff7ca2672"
 format = " $icon 🌍 $speed_down"
 inactive_format = " $icon \uf00d "
 
