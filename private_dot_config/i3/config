@@ -286,7 +286,8 @@ bindsym $mod+o exec --no-startup-id /home/prinzpiuz/bin/display.sh
 #Detect display after HDMI swicting
 bindsym $mod+Shift+d exec --no-startup-id /home/prinzpiuz/bin/redetect.sh
 
-
+#Switch DPI to laptop
+bindsym $mod+F1 exec --no-startup-id /home/prinzpiuz/bin/laptop.sh
 
 # Color shemes for windows 
 set $bgcolor    #000000
