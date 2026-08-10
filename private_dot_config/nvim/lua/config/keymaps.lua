@@ -89,3 +89,18 @@ end, { desc = "[F]ind [P]rojects" })
 -- to cycle through recent files
 map("n", "<Tab>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 map("n", "<S-Tab>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+
+-- Copy diagnostic (LSP/lint error) on current line:
+map("n", "<leader>cd", function()
+	local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
+	if #diagnostics > 0 then
+		local messages = {}
+		for _, d in ipairs(diagnostics) do
+			table.insert(messages, d.message)
+		end
+		vim.fn.setreg("+", table.concat(messages, "\n"))
+		vim.notify("Diagnostic copied to clipboard")
+	else
+		vim.notify("No diagnostic on this line")
+	end
+end, { desc = "Copy diagnostic to clipboard" })
