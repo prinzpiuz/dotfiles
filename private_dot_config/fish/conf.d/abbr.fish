@@ -104,3 +104,8 @@ alias la='eza -a --icons --group-directories-first'
 alias lt='eza --tree --level=2 --icons'
 alias lla='eza -lah --icons --group-directories-first'
 alias list_with_size='eza --long --all  --header --git --icons --total-size --color=always --group-directories-first'
+
+#nvim related
+alias v='nvim .'
+alias vi='nvim .'
+
