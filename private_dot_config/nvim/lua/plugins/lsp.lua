@@ -89,6 +89,22 @@ return {
 			taplo = {},
 			bashls = {},
 			docker_compose_language_service = {},
+			harper_ls = {
+				filetypes = { "markdown", "text", "gitcommit" },
+				settings = {
+					["harper-ls"] = {
+						linters = {
+							SpellCheck = true,
+							SentenceCapitalization = false,
+							SpelledNumbers = false,
+							LongSentences = true,
+							RepeatedWords = true,
+						},
+						diagnosticSeverity = "hint",
+						dialect = "American",
+					},
+				},
+			},
 			yamlls = {
 				settings = {
 					yaml = {
