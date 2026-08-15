@@ -73,3 +73,13 @@ function pk
         fuser -k "$argv[1]/tcp"
     end
 end
+
+# Restore last session for the current directory
+function vs
+    nvim -c "lua require('persistence').load()"
+end
+
+# Restore the very last session regardless of directory
+function vl
+    nvim -c "lua require('persistence').load({ last = true })"
+end
