@@ -6,8 +6,7 @@ return {
 	config = function()
 		local util = require("lspconfig.util")
 		require("typescript-tools").setup({
-			root_dir = util.root_pattern("tsconfig.json", "package.json", "jsconfig.json"),
-			single_file_support = false,
+			root_dir = util.root_pattern("tsconfig.json", "package.json", "jsconfig.json", ".git"),
 		})
 	end,
 }
