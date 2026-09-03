@@ -37,14 +37,6 @@ return {
 				-- Goto Declaration (not Definition).
 				map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
-				require("typescript-tools").setup({
-					on_attach = on_attach,
-					settings = {
-						-- spawn_tsserver_max_memory = 4096, -- Useful for large TS projects
-						expose_as_code_action = "all", -- Shows fix-its in the 'gra' menu
-					},
-				})
-
 				-- Highlight references of the word under cursor.
 				local client = vim.lsp.get_client_by_id(event.data.client_id)
 				if client and client:supports_method("textDocument/documentHighlight", event.buf) then
