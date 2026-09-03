@@ -15,6 +15,7 @@ return {
 			{ "gr", group = "LSP Actions", mode = { "n" } },
 			{ "<leader>F", group = "[F]lutter" },
 			{ "<leader>D", group = "[D]atabase" },
+			{ "<leader>a", group = "[A]I" },
 		},
 	},
 }
