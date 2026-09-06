@@ -83,3 +83,21 @@ end
 function vl
     nvim -c "lua require('persistence').load({ last = true })"
 end
+
+function aconnect --description "ADB connect to phone (pass port only)"
+    if test (count $argv) -ne 1
+        echo "Usage: aconnect <port>"
+        echo "Example: aconnect 42787"
+        return 1
+    end
+    adb connect 192.168.2.245:$argv[1]
+end
+
+function apair --description "ADB pair with phone (pass port and pairing code)"
+    if test (count $argv) -ne 2
+        echo "Usage: apair <port> <pairing_code>"
+        echo "Example: apair 42291 365327"
+        return 1
+    end
+    adb pair 192.168.2.245:$argv[1] $argv[2]
+end
