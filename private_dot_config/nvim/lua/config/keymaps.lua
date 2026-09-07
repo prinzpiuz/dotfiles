@@ -104,3 +104,21 @@ map("n", "<leader>cd", function()
 		vim.notify("No diagnostic on this line")
 	end
 end, { desc = "Copy diagnostic to clipboard" })
+
+-- Copy full path
+map("n", "<leader>yp", function()
+	vim.fn.setreg("+", vim.fn.expand("%:p"))
+	vim.notify("Copied: " .. vim.fn.expand("%:p"))
+end, { desc = "Copy full path" })
+
+-- Copy relative path
+map("n", "<leader>yr", function()
+	vim.fn.setreg("+", vim.fn.expand("%"))
+	vim.notify("Copied: " .. vim.fn.expand("%"))
+end, { desc = "Copy relative path" })
+
+-- Copy filename only
+map("n", "<leader>yn", function()
+	vim.fn.setreg("+", vim.fn.expand("%:t"))
+	vim.notify("Copied: " .. vim.fn.expand("%:t"))
+end, { desc = "Copy filename" })
