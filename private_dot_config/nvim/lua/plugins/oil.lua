@@ -39,6 +39,7 @@ return {
 				["<C-t>"] = { "actions.select", opts = { tab = true } },
 				["<C-p>"] = "actions.preview",
 				["<C-r>"] = "actions.refresh",
+				["gy"] = "actions.copy_entry_path",
 			},
 			skip_confirm_for_simple_edits = true,
 		})
