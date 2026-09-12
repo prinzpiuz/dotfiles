@@ -6,6 +6,12 @@ return {
 	},
 	config = function()
 		require("codecompanion").setup({
+			display = {
+				diff = {
+					enabled = true,
+					provider = "mini_diff",
+				},
+			},
 			adapters = {
 				acp = {
 					codex = function()
