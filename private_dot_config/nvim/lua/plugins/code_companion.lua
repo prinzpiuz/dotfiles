@@ -24,7 +24,7 @@ return {
 					claude_code = function()
 						return require("codecompanion.adapters").extend("claude_code", {
 							commands = {
-								default = { "~/.volta/bin/claude-agent-acp" },
+								default = { "claude-agent-acp" },
 							},
 						})
 					end,
