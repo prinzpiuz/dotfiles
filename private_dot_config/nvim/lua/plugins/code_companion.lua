@@ -26,6 +26,10 @@ return {
 							commands = {
 								default = { vim.env.HOME .. "/.volta/bin/claude-agent-acp" },
 							},
+							env = {
+								ANTHROPIC_API_KEY = "",
+								ANTHROPIC_AUTH_TOKEN = "",
+							},
 						})
 					end,
 				},
