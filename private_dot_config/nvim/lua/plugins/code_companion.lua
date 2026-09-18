@@ -22,11 +22,7 @@ return {
 						})
 					end,
 					claude_code = function()
-						return require("codecompanion.adapters").extend("claude_code", {
-							env = {
-								ANTHROPIC_API_KEY = "ANTHROPIC_API_KEY",
-							},
-						})
+						return require("codecompanion.adapters").extend("claude_code", {})
 					end,
 				},
 			},
