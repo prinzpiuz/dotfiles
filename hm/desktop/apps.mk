@@ -1,7 +1,8 @@
 
 APT += firefox-esr kdenlive kdeconnect
-APT += fam qt5-qmltooling-plugins phonon4qt5-backend-gstreamer
-APT += ibus
+APT += fam qt5-qmltooling-plugins phonon4qt5-backend-gstreamer voikko-fi hspell
+APT += ibus python3-levenshtein
+APT += bluez
 APT += clamav
 
 # Package name overrides

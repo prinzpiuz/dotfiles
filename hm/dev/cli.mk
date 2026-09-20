@@ -5,6 +5,7 @@ APT += ripgrep jq bat fzf htop maim fish copyq inotify-tools tldr
 APT += git git-extras
 APT += restic ledger hledger
 APT += sshfs
+APT += smartmontools
 
 # Package name overrides (apt name differs from target name)
 PKG_bat := bat

@@ -156,6 +156,67 @@ mullvad:
 	@echo "installing/upgrading $@..."
 	@echo "Download .deb from https://mullvad.net/download/linux and install with: sudo dpkg -i <file>.deb"
 
+# Manual installs — no scriptable installer; these print where to get the tool
+.PHONY: obsidian
+obsidian:
+	@echo "installing/upgrading $@..."
+	@echo "Download the .deb from https://obsidian.md/ and install with: sudo dpkg -i <file>.deb"
+
+.PHONY: spotify
+spotify:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://www.spotify.com/ (not in Debian repos)"
+
+.PHONY: adw-gtk3
+adw-gtk3:
+	@echo "installing/upgrading $@..."
+	@echo "Download a release from https://github.com/lassekongo83/adw-gtk3 and extract to ~/.themes"
+
+.PHONY: greenclip
+greenclip:
+	@echo "installing/upgrading $@..."
+	@echo "Download the binary from https://github.com/erebe/greenclip and save it in /usr/bin"
+
+.PHONY: gluqlo
+gluqlo:
+	@echo "installing/upgrading $@..."
+	@echo "Build from https://github.com/alexanderk23/gluqlo"
+
+.PHONY: betterlockscreen
+betterlockscreen:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://github.com/betterlockscreen/betterlockscreen"
+
+.PHONY: ibus-uniemoji
+ibus-uniemoji:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://github.com/salty-horse/ibus-uniemoji (needs python3-levenshtein, fonts-noto-color-emoji)"
+
+.PHONY: varnam
+varnam:
+	@echo "installing/upgrading $@..."
+	@echo "Install ibus-varnam from https://varnamproject.github.io/"
+
+.PHONY: gogh
+gogh:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://github.com/Gogh-Co/Gogh"
+
+.PHONY: paisa
+paisa:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://paisa.fyi/"
+
+.PHONY: noisetorch
+noisetorch:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://github.com/noisetorch/NoiseTorch"
+
+.PHONY: bluetooth-battery
+bluetooth-battery:
+	@echo "installing/upgrading $@..."
+	@echo "Install from https://github.com/TheWeirdDev/Bluetooth_Headset_Battery_Level (needs bluez; for pybluez errors see https://github.com/pybluez/pybluez/issues/431#issuecomment-2167508291)"
+
 .PHONY: librespeed
 librespeed:
 	@echo "installing/upgrading $@..."
@@ -200,7 +261,7 @@ dotfiles: chezmoi
 # Group targets
 # =============================================================================
 .PHONY: cli
-cli: ripgrep jq bat fzf htop fd maim fish tree-sitter-cli copyq
+cli: ripgrep jq bat fzf htop fd maim fish tree-sitter-cli copyq tldr git git-extras inotify-tools smartmontools
 
 .PHONY: python
 python: uv ruff
@@ -218,19 +279,22 @@ rust-tools: stylua eza zoxide
 shell: fish oh-my-fish fisher fish-plugins
 
 .PHONY: fonts
-fonts: nerd-fonts jetbrains-mono font-awesome
+fonts: nerd-fonts fonts-jetbrains-mono fonts-firacode fonts-font-awesome fonts-noto-color-emoji fonts-powerline
 
 .PHONY: wm
-wm: i3 i3status-rust rofi dunst autorandr feh picom xscreensaver
+wm: i3 i3status-rs rofi dunst autorandr arandr x11-xserver-utils feh picom xscreensaver gluqlo upower tlp greenclip betterlockscreen papirus-icon-theme arc-theme adw-gtk3 slick-greeter
 
 .PHONY: desktop-apps
-desktop-apps: kitty firefox obsidian kdenlive kdeconnect spotify
+desktop-apps: kitty gogh firefox-esr obsidian kdenlive kdeconnect voikko-fi hspell fam qt5-qmltooling-plugins phonon4qt5-backend-gstreamer spotify noisetorch bluetooth-battery
 
 .PHONY: security
 security: clamav mullvad tailscale bitwarden-cli
 
 .PHONY: backup
 backup: restic resticprofile
+
+.PHONY: finance
+finance: ledger hledger paisa
 
 .PHONY: editors
 editors: neovim
@@ -239,7 +303,7 @@ editors: neovim
 vpn: mullvad tailscale
 
 .PHONY: input-method
-input-method: ibus ibus-uniemoji
+input-method: ibus ibus-uniemoji python3-levenshtein varnam
 
 # =============================================================================
 # Meta targets
@@ -251,7 +315,7 @@ dev: cli python node go-tools rust-tools editors shell
 desktop: wm desktop-apps fonts input-method security
 
 .PHONY: all
-all: dev desktop backup dotfiles
+all: dev desktop backup finance dotfiles
 
 # =============================================================================
 # Maintenance

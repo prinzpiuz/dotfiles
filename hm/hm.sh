@@ -20,6 +20,7 @@ wm
 desktop-apps
 security
 backup
+finance
 editors
 vpn
 input-method
