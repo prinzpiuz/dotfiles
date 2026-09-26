@@ -26,10 +26,6 @@ package.path = table.concat({
 
 vim.opt.runtimepath:prepend(nvim_config)
 
--- Automatically fold YAML proprtties when opening a note
-vim.opt.foldenable = true
-vim.opt.foldlevel = 0
-
 --------------------------------------------------------------------------
 -- 2. Shared options
 --------------------------------------------------------------------------
