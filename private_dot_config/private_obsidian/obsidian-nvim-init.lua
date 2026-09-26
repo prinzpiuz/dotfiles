@@ -25,7 +25,9 @@ package.path = table.concat({
 }, ";")
 
 vim.opt.runtimepath:prepend(nvim_config)
-
+-- config.options sets 300, which which-key masks in real Neovim.
+-- No which-key popup here, so the wait reads as lag.
+vim.opt.timeoutlen = 150
 --------------------------------------------------------------------------
 -- 2. Shared options
 --------------------------------------------------------------------------
