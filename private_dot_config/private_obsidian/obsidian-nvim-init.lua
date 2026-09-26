@@ -175,6 +175,8 @@ map("n", "<leader>u", "<cmd>UndoTreeToggle<CR>", { desc = "Undo tree" })
 -- your Ledger add-transaction command or Book Search.
 map("n", "<leader>o", "<cmd>ob<CR>", { desc = "Obsidian commands" })
 
+-- omni search
+map("n", "<leader>ss", "<cmd>Pick omnisearch<CR>", { desc = "Full-text search" })
 --------------------------------------------------------------------------
 -- Deliberately omitted
 --------------------------------------------------------------------------
