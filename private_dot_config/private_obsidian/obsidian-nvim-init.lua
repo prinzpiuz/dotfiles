@@ -153,8 +153,8 @@ map("n", "<leader>f", "<cmd>Pick files<CR>", { desc = "Find notes" })
 -- <leader><leader> was Telescope buffers
 map("n", "<leader><leader>", "<cmd>Pick buffers<CR>", { desc = "Open notes" })
 
--- <leader>sg was Telescope live_grep
-map("n", "<leader>sg", "<cmd>Pick live_grep<CR>", { desc = "Search vault" })
+-- omni search
+map("n", "<leader>ss", "<cmd>Pick omnisearch<CR>", { desc = "Full-text search" })
 
 -- <leader>e was Neotree. Oil is the closest equivalent here, and you already
 -- use oil.nvim, so `-` for parent directory is carried over too.
@@ -175,8 +175,6 @@ map("n", "<leader>u", "<cmd>UndoTreeToggle<CR>", { desc = "Undo tree" })
 -- your Ledger add-transaction command or Book Search.
 map("n", "<leader>o", "<cmd>ob<CR>", { desc = "Obsidian commands" })
 
--- omni search
-map("n", "<leader>ss", "<cmd>Pick omnisearch<CR>", { desc = "Full-text search" })
 --------------------------------------------------------------------------
 -- Deliberately omitted
 --------------------------------------------------------------------------
