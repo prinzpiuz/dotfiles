@@ -19,12 +19,16 @@
 local nvim_config = vim.fn.expand("~/.config/nvim")
 
 package.path = table.concat({
-    nvim_config .. "/lua/?.lua",
-    nvim_config .. "/lua/?/init.lua",
-    package.path,
+	nvim_config .. "/lua/?.lua",
+	nvim_config .. "/lua/?/init.lua",
+	package.path,
 }, ";")
 
 vim.opt.runtimepath:prepend(nvim_config)
+
+-- Automatically fold YAML proprtties when opening a note
+vim.opt.foldenable = true
+vim.opt.foldlevel = 0
 
 --------------------------------------------------------------------------
 -- 2. Shared options
@@ -35,7 +39,7 @@ vim.opt.runtimepath:prepend(nvim_config)
 
 local ok, err = pcall(require, "config.options")
 if not ok then
-    vim.notify("obsidian init: could not load config.options: " .. tostring(err), vim.log.levels.WARN)
+	vim.notify("obsidian init: could not load config.options: " .. tostring(err), vim.log.levels.WARN)
 end
 
 --------------------------------------------------------------------------
@@ -80,21 +84,21 @@ vim.opt.shiftwidth = 4
 local mini_path = vim.fn.stdpath("data") .. "/lazy/mini.nvim"
 
 if vim.uv.fs_stat(mini_path) then
-    vim.opt.runtimepath:append(mini_path)
+	vim.opt.runtimepath:append(mini_path)
 
-    pcall(function()
-        require("mini.ai").setup({ n_lines = 500 })
-    end)
+	pcall(function()
+		require("mini.ai").setup({ n_lines = 500 })
+	end)
 
-    -- sa / sd / sr, same as your main config.
-    -- Note: Vim Motions ships its own surround, but under RPC mode Neovim owns
-    -- editor keys, so mini.surround is what actually runs. That is intended.
-    pcall(function()
-        require("mini.surround").setup()
-    end)
+	-- sa / sd / sr, same as your main config.
+	-- Note: Vim Motions ships its own surround, but under RPC mode Neovim owns
+	-- editor keys, so mini.surround is what actually runs. That is intended.
+	pcall(function()
+		require("mini.surround").setup()
+	end)
 
-    -- mini.indentscope is omitted: its indent guides are meaningless in prose
-    -- and it draws via extmarks on every cursor move. Add it back if you want it.
+	-- mini.indentscope is omitted: its indent guides are meaningless in prose
+	-- and it draws via extmarks on every cursor move. Add it back if you want it.
 end
 
 --------------------------------------------------------------------------
@@ -128,18 +132,18 @@ map("n", "<C-k>", "<C-w><C-k>", { desc = "Focus upper pane" })
 -- Yank paths. vim.fn.expand("%") resolves against the mirrored buffer, so
 -- these give you the note path.
 map("n", "<leader>yp", function()
-    vim.fn.setreg("+", vim.fn.expand("%:p"))
-    vim.notify("Copied: " .. vim.fn.expand("%:p"))
+	vim.fn.setreg("+", vim.fn.expand("%:p"))
+	vim.notify("Copied: " .. vim.fn.expand("%:p"))
 end, { desc = "Copy full path" })
 
 map("n", "<leader>yr", function()
-    vim.fn.setreg("+", vim.fn.expand("%"))
-    vim.notify("Copied: " .. vim.fn.expand("%"))
+	vim.fn.setreg("+", vim.fn.expand("%"))
+	vim.notify("Copied: " .. vim.fn.expand("%"))
 end, { desc = "Copy relative path" })
 
 map("n", "<leader>yn", function()
-    vim.fn.setreg("+", vim.fn.expand("%:t"))
-    vim.notify("Copied: " .. vim.fn.expand("%:t"))
+	vim.fn.setreg("+", vim.fn.expand("%:t"))
+	vim.notify("Copied: " .. vim.fn.expand("%:t"))
 end, { desc = "Copy filename" })
 
 -- ---- Repointed ---------------------------------------------------------
