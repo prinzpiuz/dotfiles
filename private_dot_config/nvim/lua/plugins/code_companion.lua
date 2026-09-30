@@ -3,9 +3,19 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
+		"ravitemer/codecompanion-history.nvim",
 	},
 	config = function()
 		require("codecompanion").setup({
+			extensions = {
+				history = {
+					enabled = true,
+					opts = {
+						auto_save = true,
+						continue_last_chat = false,
+					},
+				},
+			},
 			display = {
 				diff = {
 					enabled = true,
