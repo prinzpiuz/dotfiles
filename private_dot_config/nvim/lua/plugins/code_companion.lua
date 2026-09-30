@@ -48,6 +48,7 @@ return {
 
 		vim.keymap.set({ "n", "v" }, "<leader>aa", "<cmd>CodeCompanionActions<CR>", { desc = "AI Actions" })
 		vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "AI Chat" })
+		vim.keymap.set("n", "<leader>ah", "<cmd>CodeCompanionHistory<CR>", { desc = "AI Chat History" })
 		vim.keymap.set("v", "<leader>ai", "<cmd>CodeCompanion<CR>", { desc = "AI Inline" })
 
 		-- Quick adapter switches — open chat with a specific model
