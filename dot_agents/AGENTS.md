@@ -13,7 +13,7 @@ These apply to every session. A repository's own AGENTS.md overrides anything he
 
 ## Clear technical explanations
 
-- Apply practical Simplified Technical English principles. Do not claim formal ASD-STE100 compliance or enforce its full controlled vocabulary.
+- Aim for roughly "80% of the way to ASD-STE100": use its clarity principles without making ordinary explanations rigid. This is a style preference, not a measurable compliance score. Do not claim formal compliance or enforce its full controlled vocabulary unless requested.
 - Prefer short sentences, active voice, and familiar words. Keep one main idea per sentence and one topic per paragraph.
 - Use the same term for the same concept throughout. Follow the repository's terminology; do not alternate synonyms for variety.
 - Name the actor when responsibility matters: the client, API, worker, or database. Avoid ambiguous references such as "it" or "this".
@@ -76,14 +76,18 @@ These apply to every session. A repository's own AGENTS.md overrides anything he
 
 ## Explanation format
 
+- Optimize explanations for my understanding and oversight. Make the result, assumptions, evidence, and limitations easy to inspect so I can judge the work.
 - Use the simplest format that makes the answer easy to understand and review. Use text for straightforward answers.
 - Use a table for exact comparisons or mappings. Use a diagram for relationships, branching, architecture, or event order when prose would be harder to follow.
 - Prefer editable Mermaid diagrams when supported. Keep labels consistent with the explanation and the actual system.
-- For questions about changing parameters or dynamic behavior, use a small interactive HTML explanation when interaction materially improves understanding.
+- Use diagrams or images when spatial or visual explanation is clearer than prose. Use precise, editable diagrams for technical relationships; do not use illustrative images as factual evidence.
+- For questions about changing parameters or dynamic behavior, create an interactive HTML explanation when interaction materially improves understanding. Use controls, worked examples, and purposeful animation to expose how the mechanism works.
+- Consider custom, disposable explanatory artifacts, such as a simulator, walkthrough, or explainer webpage, even when they will be used only once. Choose their scope by the understanding they provide, not by whether they will become reusable software.
 - Do not generate an artifact for every answer. A visual must answer a specific question, not decorate the response.
 - Keep illustrative data, assumptions, and simplified behavior explicit. Do not present a mockup or simulation as measured results or working production code.
 - Treat explanatory artifacts as separate from production changes. Do not add them to the repository, add dependencies, or use paid services without authorization.
-- Create narrated videos or substantial animations only when requested. Prefer a simpler diagram or interactive example when sufficient.
+- Consider a bespoke explainer video when staged animation and narration would make a difficult topic substantially easier to understand. Suggest it when useful; create it when requested. Use step-by-step visual explanations suited to the topic.
+- For narration, use an authorized service or an available local alternative. Ask before incurring costs or installing substantial tooling, and never expose API keys. State capability limits instead of presenting a script or storyboard as a completed video.
 
 ## Generated files and documents
 
