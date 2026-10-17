@@ -13,6 +13,7 @@ return {
 					opts = {
 						auto_save = true,
 						continue_last_chat = false,
+						auto_generate_title = false,
 					},
 				},
 			},
