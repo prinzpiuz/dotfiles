@@ -122,3 +122,6 @@ map("n", "<leader>yn", function()
 	vim.fn.setreg("+", vim.fn.expand("%:t"))
 	vim.notify("Copied: " .. vim.fn.expand("%:t"))
 end, { desc = "Copy filename" })
+
+-- Render Markdown
+map("n", "<leader>mr", "<cmd>RenderMarkdown toggle<CR>", { desc = "Toggle markdown render" })
