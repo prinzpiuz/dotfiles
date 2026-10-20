@@ -109,3 +109,5 @@ alias list_with_size='eza --long --all  --header --git --icons --total-size --co
 alias v='nvim .'
 alias vi='nvim .'
 
+#reset network
+alias reset_network='sudo rm -rf /etc/resolv.conf && sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf && sudo sysctl -p'
