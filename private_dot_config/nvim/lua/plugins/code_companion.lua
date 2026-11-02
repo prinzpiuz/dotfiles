@@ -18,6 +18,13 @@ return {
 				},
 			},
 			display = {
+				chat = {
+					window = {
+						layout = "vertical", -- split beside your code
+						position = "right", -- "left" or "right"
+						width = 0.60, -- 45% of the screen
+					},
+				},
 				diff = {
 					enabled = true,
 					provider = "mini_diff",
