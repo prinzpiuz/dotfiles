@@ -1,9 +1,9 @@
 [diff]
     command = "nvim"
-    args = ["-d", "{{ .Destination }}", "{{ .Target }}"]
+    args = ["-d", {{ printf "%q" "{{ .Destination }}" }}, {{ printf "%q" "{{ .Target }}" }}]
 [merge]
     command = "nvim"
-    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
+    args = ["-d", {{ printf "%q" "{{ .Destination }}" }}, {{ printf "%q" "{{ .Source }}" }}, {{ printf "%q" "{{ .Target }}" }}]
 [edit]
     command = "nvim"
 [git]
