@@ -151,6 +151,19 @@ tailscale:
 	@echo "installing/upgrading $@..."
 	@curl -fsSL https://tailscale.com/install.sh | sh
 
+# Official GitHub apt repo. Debian's own gh package is outdated, and gh's docs
+# say its 2.45/2.46 builds are broken: https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+.PHONY: gh
+gh:
+	@echo "installing/upgrading $@..."
+	@sudo mkdir -p -m 755 /etc/apt/keyrings /etc/apt/sources.list.d
+	@out=$$(mktemp) && curl -fsSL -o $$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+		&& sudo install -m 644 $$out /etc/apt/keyrings/githubcli-archive-keyring.gpg && rm -f $$out
+	@echo "deb [arch=$$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" \
+		| sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+	@sudo apt update
+	@sudo apt install -y gh
+
 .PHONY: mullvad
 mullvad:
 	@echo "installing/upgrading $@..."
@@ -261,7 +274,7 @@ dotfiles: chezmoi
 # Group targets
 # =============================================================================
 .PHONY: cli
-cli: ripgrep jq bat fzf htop fd maim fish tree-sitter-cli copyq tldr git git-extras inotify-tools smartmontools
+cli: ripgrep jq bat fzf htop fd maim fish tree-sitter-cli copyq tldr git git-extras inotify-tools smartmontools gh
 
 .PHONY: python
 python: uv ruff
